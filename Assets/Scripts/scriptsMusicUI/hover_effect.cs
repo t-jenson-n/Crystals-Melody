@@ -15,9 +15,17 @@ public class hover_effect : MonoBehaviour
     void OnTriggerEnter(Collider collision)
     {
         //EditorUtility.DisplayDialog("working?", "working", "ok", "cancel");
+        Debug.Log("contact");
         if (collision.transform.parent.gameObject == note)
         {
             barRenderer.material.color = collision.GetComponent<Renderer>().material.color ;
+        }
+    }
+    private void OnTriggerStay(Collider collision)
+    {
+        if (collision.transform.parent.gameObject == note)
+        {
+            barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
         }
     }
     private void OnTriggerExit(Collider collision)
