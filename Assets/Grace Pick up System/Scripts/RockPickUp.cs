@@ -12,7 +12,7 @@ using UnityEngine.UI;
 
 public class RockPickUp : MonoBehaviour
 {
-
+    private GameController gameController;
     //for the pop up to click E
     public GameObject pickupUI;
 
@@ -24,6 +24,8 @@ public class RockPickUp : MonoBehaviour
     void Start()
     {
         pickupUI.SetActive(false);
+
+        gameController = GetComponentInParent<GameController>();
     }
 
     // void on trigger enter
@@ -131,6 +133,11 @@ public class RockPickUp : MonoBehaviour
 
 
 
+            gameController.rocksCollected += 1;
+
+            Debug.Log("-----------   Added a rock : " + gameController.rocksCollected);
+
+
 
 
             /* was tyring to 
@@ -159,8 +166,6 @@ public class RockPickUp : MonoBehaviour
                 }
             }
             */
-
-
 
 
         }

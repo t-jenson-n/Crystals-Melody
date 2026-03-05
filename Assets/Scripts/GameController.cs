@@ -33,6 +33,8 @@ public class GameController : MonoBehaviour
         if (rocksCollected >= 4)
         {
             backpackButton.GetComponent<StatusChange>().Show();
+
+            Debug.Log("?????????   Added a rock : " + rocksCollected);
         }
 
         if (melodyCorrect == true)
