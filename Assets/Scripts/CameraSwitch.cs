@@ -19,10 +19,12 @@ public class CameraSwitch : MonoBehaviour
     //third method Camera Storage: Best
     public Camera CamValOff;
     public Camera CamValOn;
+    public GameObject imageHolder;
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.GetComponent<Renderer>().enabled = false;
+        imageHolder.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other) //when something collides with the collider,
@@ -34,6 +36,15 @@ public class CameraSwitch : MonoBehaviour
             CamValOff.enabled = false; //disable camera
             CamValOn.enabled = true; //enable camera
             CamValOn.tag = "MainCamera"; //set this camera to be the main camera, 
+        }
+        //Secret stuff hehehehehe
+        if (this.name == "SpecialSwitch")
+        {
+            imageHolder.SetActive(true);
+        }
+        if (this.name == "SpecialSwitch2")
+        {
+            imageHolder.SetActive(false);
         }
     }
 
