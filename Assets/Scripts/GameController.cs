@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        rocksCounter_Text.text = "Rocks Collected: " + rocksCollected;
+        rocksCounter_Text.text = "ROCKS COLLECTED: " + rocksCollected;
 
         if (rocksCollected >= 4)
         {
