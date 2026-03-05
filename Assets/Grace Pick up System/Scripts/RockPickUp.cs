@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -127,18 +128,45 @@ public class RockPickUp : MonoBehaviour
             pickupUI.SetActive(false);
             //just dissable rock for now
             gameObject.SetActive(false);
+
+
+
+
+
+            /* was tyring to 
+            if ((KeyCode.E)) == true) 
+            {
+
+                if (gemCollect == 1)
+                {
+                    gemHas[0] = true;
+                }
+                else if (gemCollect == 2)
+                {
+                    gemHas[1] = true;
+                }
+                else if (gemCollect == 3)
+                {
+                    gemHas[2] = true;
+                }
+                else if (gemCollect == 3)
+                {
+                    gemHas[3] = true;
+                }
+                else
+                {
+                    Break;
+                }
+            }
+            */
+
+
+
+
         }
 
 
     }
-    //  make ui popup
-
-
-
-
-    //input (E) 
-
-
 
 
 }
