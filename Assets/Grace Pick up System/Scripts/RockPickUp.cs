@@ -19,6 +19,11 @@ public class RockPickUp : MonoBehaviour
 
     //GameObject.tag = "Rock";
 
+    //On game start, turn off attached text
+    void Start()
+    {
+        pickupUI.SetActive(false);
+    }
 
     // void on trigger enter
     private void OnTriggerEnter(Collider collition)
@@ -119,7 +124,7 @@ public class RockPickUp : MonoBehaviour
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("******** Rock is picked up");
-
+            pickupUI.SetActive(false);
             //just dissable rock for now
             gameObject.SetActive(false);
         }

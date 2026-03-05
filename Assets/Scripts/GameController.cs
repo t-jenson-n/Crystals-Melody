@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    //storage arrays
+    public int[] gemCollect = { 1, 2, 3, 4 };
+    public bool[] gemHas = { false, false, false, false };
 
     public int rocksCollected;
 

@@ -58,9 +58,9 @@ public class Character : MonoBehaviour
         {
             camAccess = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>(); //what a ridiculous coding language, https://discussions.unity.com/t/get-a-camera-by-tag/384618/3
             direction = camAccess.transform.eulerAngles.y;
-            Debug.Log("Camera angle is " + direction);
+            /* Debug.Log("Camera angle is " + direction);
             Debug.Log("Horizontal is" + Input.GetAxis("Horizontal"));
-            Debug.Log("Vertical is" + Input.GetAxis("Vertical"));
+            Debug.Log("Vertical is" + Input.GetAxis("Vertical")); */
         }
 
         groundedPlayer = characterController.isGrounded;
