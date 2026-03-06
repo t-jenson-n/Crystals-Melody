@@ -117,6 +117,8 @@ public class RockPickUp : MonoBehaviour
 
 
 
+
+
     //  unhide popup (E) ******
     private void Update()
     {
