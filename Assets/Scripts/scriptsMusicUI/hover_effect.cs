@@ -23,6 +23,7 @@ public class hover_effect : MonoBehaviour
     void OnTriggerStay(Collider collision)
     {
             barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
+        //if(collision.CompareTag(""))
     }
     private void OnTriggerExit(Collider collision)
     {

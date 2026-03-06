@@ -28,7 +28,7 @@ public class dragdrop : MonoBehaviour
     private void OnTriggerEnter(Collider bar)//detect contact enter
     {
         // Debug.Log("contact");
-        if (bar.CompareTag("songbar") == true)
+        if (bar.transform.parent.CompareTag("songbar") == true)
         {
             hit_obj = bar.gameObject;
             contact = true;
