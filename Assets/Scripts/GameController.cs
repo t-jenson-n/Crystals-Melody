@@ -18,7 +18,6 @@ public class GameController : MonoBehaviour
 
     public TextMeshProUGUI rocksCounter_Text;
 
-    public bool melodyCorrect = false;
 
     void Start()
     {
@@ -37,10 +36,7 @@ public class GameController : MonoBehaviour
             Debug.Log("?????????   Added a rock : " + rocksCollected);
         }
 
-        if (melodyCorrect == true)
-        {
-            gameObject.GetComponent<SceneChanger>().LoadGameEnd();
-        }
+
 
     }
 

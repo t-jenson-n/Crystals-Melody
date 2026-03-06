@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MusicLevel1.unity
     guid: 4e4aa4a7c6f2142418c81c5599a7cafd
+  - enabled: 1
+    path: Assets/Scenes/CaveLevel1.unity
+    guid: 00ab643778e4156448b4a0393d9f578f
   m_configObjects: {}
