@@ -1896,6 +1896,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   playButton: {fileID: 448428348}
+  contact: 00000000
 --- !u!1 &784462103
 GameObject:
   m_ObjectHideFlags: 0
@@ -3635,7 +3636,7 @@ GameObject:
   - component: {fileID: 1343094432}
   - component: {fileID: 1343094431}
   m_Layer: 5
-  m_Name: note text
+  m_Name: rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
