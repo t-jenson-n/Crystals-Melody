@@ -4692,7 +4692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BACKPACK
+  m_text: OPEN BACKPACK
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d2b2070d548b54de1ade2eff5984be46, type: 2}
   m_sharedMaterial: {fileID: 1519791646547937472, guid: d2b2070d548b54de1ade2eff5984be46, type: 2}
@@ -4701,8 +4701,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280215551
-  m_fontColor: {r: 1, g: 0.90588236, b: 0.11764706, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6205,8 +6205,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 788, y: 475}
-  m_SizeDelta: {x: 150, y: 30}
+  m_AnchoredPosition: {x: 20, y: -476}
+  m_SizeDelta: {x: 250, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059187890
 MonoBehaviour:
@@ -6241,7 +6241,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
+    m_NormalColor: {r: 1, g: 0.90588236, b: 0.11764706, a: 1}
     m_HighlightedColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0.3254902}
     m_PressedColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.6039216}
     m_SelectedColor: {r: 0.254717, g: 0.254717, b: 0.254717, a: 0.2627451}
@@ -7335,7 +7335,6 @@ MonoBehaviour:
   rocksCollected: 0
   backpackButton: {fileID: 1059187891}
   rocksCounter_Text: {fileID: 2110927368}
-  melodyCorrect: 0
 --- !u!4 &1172950730
 Transform:
   m_ObjectHideFlags: 0
@@ -13825,7 +13824,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -840, y: 492}
+  m_AnchoredPosition: {x: -840, y: -497}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2110927368

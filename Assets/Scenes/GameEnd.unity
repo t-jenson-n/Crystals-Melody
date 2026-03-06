@@ -950,7 +950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: THANK YOU FOR PLAYING
+  m_text: YOU COMPLETED THE SONG!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d2b2070d548b54de1ade2eff5984be46, type: 2}
   m_sharedMaterial: {fileID: 1519791646547937472, guid: d2b2070d548b54de1ade2eff5984be46, type: 2}
@@ -977,8 +977,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1037,7 +1037,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1828533805}
   - component: {fileID: 1828533804}
-  - component: {fileID: 1828533806}
   - component: {fileID: 1828533807}
   m_Layer: 0
   m_Name: GameController
@@ -1078,21 +1077,6 @@ Transform:
   - {fileID: 1013979528}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1828533806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828533803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e27c05b0224c469b8ce232491573308, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rocksCollected: 0
-  backpackButton: {fileID: 0}
-  melodyCorrect: 0
 --- !u!82 &1828533807
 AudioSource:
   m_ObjectHideFlags: 0
