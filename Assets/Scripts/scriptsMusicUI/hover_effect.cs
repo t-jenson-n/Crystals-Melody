@@ -42,7 +42,6 @@ public class hover_effect : MonoBehaviour
     private void OnTriggerExit(Collider collision)
     {
         barRenderer.material.color = Color.black;
-        sounds[1].Stop();
-        sounds[0].Stop();
+       
     }
 }
