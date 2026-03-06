@@ -16,6 +16,7 @@ public class dragdrop : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();//set rigidbody
+        startpos = transform.position;
     }
     void OnMouseDrag()//drag object
     {
@@ -26,7 +27,8 @@ public class dragdrop : MonoBehaviour
 
     private void OnTriggerEnter(Collider bar)//detect contact enter
     {
-        if(bar.CompareTag("songbar") == true)
+        // Debug.Log("contact");
+        if (bar.CompareTag("songbar") == true)
         {
             hit_obj = bar.gameObject;
             contact = true;
@@ -42,7 +44,7 @@ public class dragdrop : MonoBehaviour
 
     private void OnMouseUp()//return to starting position or new position
     {
-        if(contact == true)
+        if (contact == true)
         {
             newpos = hit_obj.transform.position;
         }
@@ -50,8 +52,8 @@ public class dragdrop : MonoBehaviour
         {
             newpos = startpos;
         }
-            gameObject.transform.position = newpos;
-            rb.MovePosition(newpos);
+        gameObject.transform.position = newpos;
+        rb.MovePosition(newpos);
     }
 
     private Vector3 GetPos()//get new position 
