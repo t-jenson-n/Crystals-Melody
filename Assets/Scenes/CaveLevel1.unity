@@ -276,7 +276,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 748601248}
   CamValOn: {fileID: 1753085783}
-  imageHolder: {fileID: 0}
 --- !u!65 &9409427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1029,7 +1028,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 771055038}
   CamValOn: {fileID: 1930359640}
-  imageHolder: {fileID: 0}
 --- !u!65 &271513209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1465,7 +1463,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 748601248}
   CamValOn: {fileID: 1930359640}
-  imageHolder: {fileID: 0}
 --- !u!65 &363938767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2534,7 +2531,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 1930359640}
   CamValOn: {fileID: 748601248}
-  imageHolder: {fileID: 0}
 --- !u!65 &603412997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2905,7 +2901,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 748601248}
   CamValOn: {fileID: 1412683432}
-  imageHolder: {fileID: 0}
 --- !u!65 &686248502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3210,7 +3205,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 771055038}
   CamValOn: {fileID: 1959689682}
-  imageHolder: {fileID: 0}
 --- !u!65 &774336902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3294,7 +3288,7 @@ GameObject:
   - component: {fileID: 778678456}
   - component: {fileID: 778678455}
   - component: {fileID: 778678454}
-  - component: {fileID: 778678453}
+  - component: {fileID: 778678457}
   m_Layer: 0
   m_Name: SpecialSwitch
   m_TagString: Untagged
@@ -3317,21 +3311,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 972696953}
   m_LocalEulerAnglesHint: {x: 0, y: 25.639, z: 0}
---- !u!114 &778678453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778678451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7523e52436dfa2849aec9c962fb96e29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CamValOff: {fileID: 748601248}
-  CamValOn: {fileID: 223252009}
-  imageHolder: {fileID: 1182418672}
 --- !u!65 &778678454
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3403,6 +3382,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778678451}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &778678457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778678451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30cfbdd09a585dd4aa3f6db987a9d83b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CamValOff: {fileID: 748601248}
+  CamValOn: {fileID: 223252009}
+  imageHolder: {fileID: 1182418672}
 --- !u!1 &782892793
 GameObject:
   m_ObjectHideFlags: 0
@@ -3549,7 +3543,7 @@ GameObject:
   - component: {fileID: 836315756}
   - component: {fileID: 836315755}
   - component: {fileID: 836315754}
-  - component: {fileID: 836315753}
+  - component: {fileID: 836315757}
   m_Layer: 0
   m_Name: SpecialSwitch2
   m_TagString: Untagged
@@ -3572,21 +3566,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 972696953}
   m_LocalEulerAnglesHint: {x: 0, y: 25.639, z: 0}
---- !u!114 &836315753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836315751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7523e52436dfa2849aec9c962fb96e29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CamValOff: {fileID: 223252009}
-  CamValOn: {fileID: 748601248}
-  imageHolder: {fileID: 1182418672}
 --- !u!65 &836315754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3658,6 +3637,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836315751}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &836315757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836315751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30cfbdd09a585dd4aa3f6db987a9d83b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CamValOff: {fileID: 223252009}
+  CamValOn: {fileID: 748601248}
+  imageHolder: {fileID: 1182418672}
 --- !u!1 &940610349
 GameObject:
   m_ObjectHideFlags: 0
@@ -3707,7 +3701,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 960664946}
   CamValOn: {fileID: 1412683432}
-  imageHolder: {fileID: 0}
 --- !u!65 &940610352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4281,7 +4274,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 1753085783}
   CamValOn: {fileID: 748601248}
-  imageHolder: {fileID: 0}
 --- !u!65 &1038808396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4757,7 +4749,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 1412683432}
   CamValOn: {fileID: 960664946}
-  imageHolder: {fileID: 0}
 --- !u!65 &1088553799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5042,7 +5033,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 1930359640}
   CamValOn: {fileID: 771055038}
-  imageHolder: {fileID: 0}
 --- !u!65 &1141742006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5594,7 +5584,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 1959689682}
   CamValOn: {fileID: 771055038}
-  imageHolder: {fileID: 0}
 --- !u!65 &1188959696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6762,7 +6751,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 1412683432}
   CamValOn: {fileID: 748601248}
-  imageHolder: {fileID: 0}
 --- !u!65 &1376167424
 BoxCollider:
   m_ObjectHideFlags: 0
