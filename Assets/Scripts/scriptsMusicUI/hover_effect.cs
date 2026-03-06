@@ -20,6 +20,10 @@ public class hover_effect : MonoBehaviour
             barRenderer.material.color = collision.GetComponent<Renderer>().material.color ;
         }
     }
+    void OnTriggerStay(Collider collision)
+    {
+            barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
+    }
     private void OnTriggerExit(Collider collision)
     {
         barRenderer.material.color = Color.black;

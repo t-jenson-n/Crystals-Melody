@@ -14,7 +14,7 @@ public class AudioPlay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playButton.onClick.AddListener(play);
+        //playButton.onClick.AddListener(play);
 
         for (int i = 0; i < 4; i++)
         {
@@ -34,7 +34,7 @@ public class AudioPlay : MonoBehaviour
         }
     }
 
-   
+   /*
     void play()
     {
         for (int i = 0; i < 6; i++)
@@ -49,5 +49,5 @@ public class AudioPlay : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 }
