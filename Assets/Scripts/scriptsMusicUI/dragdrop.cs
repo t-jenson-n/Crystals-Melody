@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-using static UnityEditor.PlayerSettings;
+
 
 public class dragdrop : MonoBehaviour
 {
@@ -32,14 +32,14 @@ public class dragdrop : MonoBehaviour
         {
             hit_obj = bar.gameObject;
             contact = true;
-            Debug.Log("contact with:" + bar.gameObject.name);
+          //  Debug.Log("contact with:" + bar.gameObject.name);
         }
     }
 
     private void OnTriggerExit(Collider bar)//detect contact exit
     {
         contact = false;
-        Debug.Log("exited");
+       // Debug.Log("exited");
     }
 
     private void OnMouseUp()//return to starting position or new position
