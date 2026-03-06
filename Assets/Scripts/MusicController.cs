@@ -42,10 +42,10 @@ public class MusicController : MonoBehaviour
     void checkCorrect(int indx)
     {
         check[indx] = true;
-        for (int i = 0; i < 4; i++)
+       /* for (int i = 0; i < 4; i++)
         {
             Debug.Log(i + ": " + check[i]);
-        }
+        }*/
     }
     void checkFalse(int indx)
     {
