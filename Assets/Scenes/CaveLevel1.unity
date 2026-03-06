@@ -3331,7 +3331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 748601248}
   CamValOn: {fileID: 223252009}
-  imageHolder: {fileID: 0}
+  imageHolder: {fileID: 1182418672}
 --- !u!65 &778678454
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3469,8 +3469,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4280215551
+  m_fontColor: {r: 1, g: 0.90588236, b: 0.11764706, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3586,7 +3586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 223252009}
   CamValOn: {fileID: 748601248}
-  imageHolder: {fileID: 0}
+  imageHolder: {fileID: 1182418672}
 --- !u!65 &836315754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4530,10 +4530,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 0.93857116, b: 0.36862743, a: 0.2627451}
-    m_HighlightedColor: {r: 0.12941177, g: 0.9607843, b: 0.9607843, a: 0.3254902}
+    m_NormalColor: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
+    m_HighlightedColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0.3254902}
     m_PressedColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.6039216}
-    m_SelectedColor: {r: 1, g: 0.9372549, b: 0.36862746, a: 0.2627451}
+    m_SelectedColor: {r: 0.254717, g: 0.254717, b: 0.254717, a: 0.2627451}
     m_DisabledColor: {r: 0.21960784, g: 0.21960784, b: 0.21960784, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -9053,7 +9053,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.421387, y: 158.67603}
+  m_AnchoredPosition: {x: -22, y: 481}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1777764802
@@ -9089,7 +9089,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press (E) to pick up
+  m_text: PRESS [E] TO PICKUP ROCK
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d2b2070d548b54de1ade2eff5984be46, type: 2}
   m_sharedMaterial: {fileID: 1519791646547937472, guid: d2b2070d548b54de1ade2eff5984be46, type: 2}
@@ -9098,8 +9098,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284683012
-  m_fontColor: {r: 0.016420428, g: 0.07549446, b: 0.38679248, a: 1}
+    rgba: 4280215551
+  m_fontColor: {r: 1, g: 0.90782356, b: 0.11792451, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9152,7 +9152,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -87.208694, y: 0, z: -184.83023, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
