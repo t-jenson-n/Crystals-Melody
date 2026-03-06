@@ -9733,7 +9733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb34ea97c8ab40e48a0484c6e07d2d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupUI: {fileID: 0}
+  pickupUI: {fileID: 1777764800}
 --- !u!135 &2054965362
 SphereCollider:
   m_ObjectHideFlags: 0
