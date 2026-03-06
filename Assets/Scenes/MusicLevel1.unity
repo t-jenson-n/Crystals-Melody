@@ -1793,6 +1793,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0f843ba914ed7f41b3e944c276a18bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentbars:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  playButton: {fileID: 448428348}
 --- !u!1 &784462103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,11 +2342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e27c05b0224c469b8ce232491573308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemCollect: 01000000020000000300000004000000
-  gemHas: 00000000
   rocksCollected: 0
   backpackButton: {fileID: 0}
-  rocksCounter_Text: {fileID: 0}
   melodyCorrect: 0
 --- !u!1 &1037281768
 GameObject:
