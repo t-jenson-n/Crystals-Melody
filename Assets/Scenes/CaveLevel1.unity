@@ -3212,7 +3212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 748601248}
   CamValOn: {fileID: 223252009}
-  imageHolder: {fileID: 0}
+  imageHolder: {fileID: 1182418672}
 --- !u!65 &778678454
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3467,7 +3467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamValOff: {fileID: 223252009}
   CamValOn: {fileID: 748601248}
-  imageHolder: {fileID: 0}
+  imageHolder: {fileID: 1182418672}
 --- !u!65 &836315754
 BoxCollider:
   m_ObjectHideFlags: 0
