@@ -8,6 +8,8 @@ TagManager:
   - songbar
   - Rock
   - Special
+  - G note
+  - C note
   layers:
   - Default
   - TransparentFX

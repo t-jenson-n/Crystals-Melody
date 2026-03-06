@@ -9,12 +9,14 @@ public class AudioPlay : MonoBehaviour
 {
     public GameObject[] parentbars; //parent
     public Button playButton;
-    private GameObject[] bars = new GameObject[24]; //child
-    private GameObject[,] bars2 = new GameObject[4, 6];
+    //private GameObject[,] bars = new GameObject[4, 6];
+    public bool[] contact ={false,false,false,false};
     // Start is called before the first frame update
     void Start()
     {
-        playButton.onClick.AddListener(play);
+        
+        /*
+        //playButton.onClick.AddListener(play);
 
         for (int i = 0; i < 4; i++)
         {
@@ -22,32 +24,44 @@ public class AudioPlay : MonoBehaviour
             {
                 //bars[(i*6)+j] = parentbars[i].transform.GetChild(j).gameObject;
                 int val = (i * 6) + j;
-                bars[val] = parentbars[i].transform.GetChild(j).gameObject;
-                bars2[i, j] = parentbars[i].transform.GetChild(j).gameObject;
+                
+                bars[i, j] = parentbars[i].transform.GetChild(j).gameObject;
                 // Debug.Log("val"+val+": "+parentbars[i].transform.GetChild(j).gameObject.name);
             }
         }
 
         for (int i = 0; i < 4; i++)
         {
-            Debug.Log("0:" + bars2[i, 0].name + ", 1:" + bars2[i, 1].name + ", 2:" + bars2[i, 2].name + ", 3" + bars2[i, 3].name + ", 4" + bars2[i, 4].name + ", 5" + bars2[i, 5].name);
+            Debug.Log("0:" + bars[i, 0].name + ", 1:" + bars[i, 1].name + ", 2:" + bars[i, 2].name + ", 3" + bars[i, 3].name + ", 4" + bars[i, 4].name + ", 5" + bars[i, 5].name);
+        }*/
+    }
+    private void Update()
+    {
+        for (int i = 0; i < 4; i++) {
+            if (this.gameObject.transform.GetChild(i).gameObject.GetComponent<Collider>().isTrigger == true)
+            {
+
+            }
         }
     }
 
-   
+    bool compare()
+    {
+        bool compare=false;
+        return compare;
+    }
     void play()
     {
+        /*
         for (int i = 0; i < 6; i++)
         {
             for (int j = 0; j < 4; j++)
             {
-                if (bars2[j, i].GetComponent<Collider>().isTrigger == true)
+                if (bars[j, i].GetComponent<Collider>().isTrigger == true)
                 {
-                    Debug.Log(bars2[j, i].GetComponent<Collider>().gameObject.name);
-                    
-                    // Collider[] hitOBJ = Physics.OverlapBox(bars2[j, i].transform.position, Quaternion.identity)
+                   
                 }
             }
-        }
+        }*/
     }
 }
