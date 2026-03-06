@@ -225,7 +225,6 @@ GameObject:
   - component: {fileID: 75084535}
   - component: {fileID: 75084538}
   - component: {fileID: 75084537}
-  - component: {fileID: 75084536}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -252,19 +251,6 @@ RectTransform:
   m_AnchoredPosition: {x: -48, y: -348}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &75084536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75084534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb34ea97c8ab40e48a0484c6e07d2d69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupUI: {fileID: 75084534}
 --- !u!114 &75084537
 MonoBehaviour:
   m_ObjectHideFlags: 0
