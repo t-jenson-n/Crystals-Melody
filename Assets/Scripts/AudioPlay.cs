@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+//using UnityEngine.UIElements;
 
 public class AudioPlay : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class AudioPlay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playButton.onClick.AddListener(play);
+
         for (int i = 0; i < 4; i++)
         {
             for (int j = 0; j < 6; j++)
@@ -28,21 +32,22 @@ public class AudioPlay : MonoBehaviour
         {
             Debug.Log("0:" + bars2[i, 0].name + ", 1:" + bars2[i, 1].name + ", 2:" + bars2[i, 2].name + ", 3" + bars2[i, 3].name + ", 4" + bars2[i, 4].name + ", 5" + bars2[i, 5].name);
         }
-        /* for(int i = 0;i < bars.Length; i++)
-         {
-             Debug.Log(i+": "+bars[i].name+", ");
-         }*/
     }
 
-    // Update is called once per frame
-    void Update()
-    {/*
-        for (int i = 0; i < bars.Length; i++)
+   
+    void play()
+    {
+        for (int i = 0; i < 6; i++)
         {
-            if (bars[i].GetComponent<Collider>().isTrigger == true)
+            for (int j = 0; j < 4; j++)
             {
-
+                if (bars2[j, i].GetComponent<Collider>().isTrigger == true)
+                {
+                    Debug.Log(bars2[j, i].GetComponent<Collider>().gameObject.name);
+                    
+                    // Collider[] hitOBJ = Physics.OverlapBox(bars2[j, i].transform.position, Quaternion.identity)
+                }
             }
-        }*/
+        }
     }
 }
