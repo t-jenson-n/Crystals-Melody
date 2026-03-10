@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class dragdrop : MonoBehaviour
 {
     public Vector3 startpos;
-    private Rigidbody rb;
+    //private Rigidbody rb;
 
     private Vector3 newpos;
     private GameObject hit_obj;
@@ -15,14 +15,24 @@ public class dragdrop : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();//set rigidbody
+        //rb = GetComponent<Rigidbody>();//set rigidbody
         startpos = transform.position;
+    }
+    private void OnMouseEnter()
+    {
+        transform.localScale = new Vector3(transform.localScale.x+10f, transform.localScale.y, transform.localScale.z + 10f);
+        //Debug.Log("over");
+    }
+    private void OnMouseExit()
+    {
+        transform.localScale = new Vector3(transform.localScale.x - 10f, transform.localScale.y, transform.localScale.z - 10f);
+        
     }
     void OnMouseDrag()//drag object
     {
         Vector3 position = GetPos();
         transform.position = position;
-        rb.MovePosition(position);
+        //rb.MovePosition(position);
     }
 
     private void OnTriggerEnter(Collider bar)//detect contact enter
@@ -53,7 +63,7 @@ public class dragdrop : MonoBehaviour
             newpos = startpos;
         }
         gameObject.transform.position = newpos;
-        rb.MovePosition(newpos);
+        //rb.MovePosition(newpos);
     }
 
     private Vector3 GetPos()//get new position 
