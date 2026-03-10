@@ -45,6 +45,10 @@ public class hover_effect : MonoBehaviour
         if (collision.transform.parent.gameObject == note)
         {
             barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
+            if (collision.CompareTag(this.gameObject.tag))
+            {
+                   gameObject.SendMessageUpwards("checkCorrect", Array.IndexOf(barindx, this.gameObject));
+            }
         }
     }
     private void OnTriggerExit(Collider collision)
@@ -53,7 +57,10 @@ public class hover_effect : MonoBehaviour
 
         if (Array.IndexOf(barindx, this.gameObject) != -1)
         {
-            gameObject.SendMessageUpwards("checkFalse", Array.IndexOf(barindx, this.gameObject));
+            if (collision.CompareTag(this.gameObject.tag))
+            {
+                gameObject.SendMessageUpwards("checkFalse", Array.IndexOf(barindx, this.gameObject));
+            }
 
         }
     }
