@@ -42,6 +42,7 @@ public class hover_effect : MonoBehaviour
     {
         if (collision.transform.parent.gameObject == note)
         {
+            gameObject.SendMessageUpwards("enter_contact", this.gameObject);
             barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
             if (collision.CompareTag(this.gameObject.tag))
             {
@@ -52,7 +53,7 @@ public class hover_effect : MonoBehaviour
     private void OnTriggerExit(Collider collision)
     {
         barRenderer.material.color = Color.black;
-
+        gameObject.SendMessageUpwards("exit_contact", this.gameObject);
         if (collision.CompareTag(this.gameObject.tag))
          {
             gameObject.SendMessageUpwards("checkFalse", this.gameObject);
