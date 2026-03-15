@@ -9,14 +9,13 @@ public class hover_effect : MonoBehaviour
     private AudioSource[] sounds;
     public GameObject note;
     private Renderer barRenderer;
-    public GameObject[] barindx;
+   // public GameObject[] barindx;
 
 
     // Start is called before the first frame update
     void Start()
     {
 
-        barindx = new GameObject[4] { GameObject.Find("CBar (0)"), GameObject.Find("CBar (1)"), GameObject.Find("GBar (2)"), GameObject.Find("GBar (3)") };
         sounds = GetComponentsInParent<AudioSource>();
         barRenderer = GetComponent<Renderer>();
 
@@ -31,7 +30,6 @@ public class hover_effect : MonoBehaviour
             {
                 // Debug.Log("right");
                 sounds[1].Play();
-                gameObject.SendMessageUpwards("checkCorrect", Array.IndexOf(barindx, this.gameObject));
             }
             else
             {
@@ -44,24 +42,21 @@ public class hover_effect : MonoBehaviour
     {
         if (collision.transform.parent.gameObject == note)
         {
+            gameObject.SendMessageUpwards("enter_contact", this.gameObject);
             barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
             if (collision.CompareTag(this.gameObject.tag))
             {
-                   gameObject.SendMessageUpwards("checkCorrect", Array.IndexOf(barindx, this.gameObject));
+                   gameObject.SendMessageUpwards("checkCorrect", this.gameObject);
             }
         }
     }
     private void OnTriggerExit(Collider collision)
     {
         barRenderer.material.color = Color.black;
-
-        if (Array.IndexOf(barindx, this.gameObject) != -1)
-        {
-            if (collision.CompareTag(this.gameObject.tag))
-            {
-                gameObject.SendMessageUpwards("checkFalse", Array.IndexOf(barindx, this.gameObject));
-            }
-
-        }
+        gameObject.SendMessageUpwards("exit_contact", this.gameObject);
+        if (collision.CompareTag(this.gameObject.tag))
+         {
+            gameObject.SendMessageUpwards("checkFalse", this.gameObject);
+         }
     }
 }
