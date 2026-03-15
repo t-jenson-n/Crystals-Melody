@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static Unity.VisualScripting.Member;
 
 
 public class MusicController : MonoBehaviour
 {
-
     public bool melodyCorrect = false;
 
     public GameObject[] barindx;
@@ -27,7 +27,6 @@ public class MusicController : MonoBehaviour
     public GameObject[,] bars = new GameObject[4, 6];
     public bool[,] contact = new bool[4, 6];
     public GameObject[] parentbars;
-
     void Start()
     {
         check = new bool[4] { false, false, false, false };
@@ -42,7 +41,8 @@ public class MusicController : MonoBehaviour
         melodyCorrect = wincheck();
         if (melodyCorrect == true)
         {
-            gameObject.GetComponent<SceneChanger>().LoadGameEnd();
+            StartCoroutine(playsong());
+            this.gameObject.GetComponent<SceneChanger>().LoadGameEnd();
         }
 
     }
@@ -110,7 +110,7 @@ public class MusicController : MonoBehaviour
     {
         index2D indx = get_index(bars, obj);
         contact[indx.indexX, indx.indexY] = true;
-        //print_ContactTable();
+       // print_ContactTable();
     }
 
     void exit_contact(GameObject obj)
@@ -118,17 +118,6 @@ public class MusicController : MonoBehaviour
         index2D indx = get_index(bars, obj);
         contact[indx.indexX, indx.indexY] = false;
         //print_ContactTable();
-    }
-
-
-    void playsong()
-    {
-        for (int i = 0; i < check.Length; i++) {
-            if (check[i] == true)
-            {
-                barindx[i].GetComponent<AudioSource>().Play();
-            }
-        }
     }
     
     void checkCorrect(GameObject obj)
@@ -144,5 +133,22 @@ public class MusicController : MonoBehaviour
     {
         int indx = Array.IndexOf(barindx, obj);
         check[indx] = false;
+    }
+
+    IEnumerator playsong()
+    {
+        yield return null;
+        
+        for (int i = 0; i < 4; i++)
+        {
+            AudioSource[] sounds = barindx[i].GetComponentsInParent<AudioSource>();
+            sounds[1].Play();
+            //Debug.Log(sounds[1].name);
+            while (sounds[i].isPlaying)
+            {
+                yield return null; 
+            }
+        }
+
     }
 }
