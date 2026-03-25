@@ -881,7 +881,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -989,7 +989,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d2b2070d548b54de1ade2eff5984be46, type: 2}
   m_sharedMaterial: {fileID: 1519791646547937472, guid: d2b2070d548b54de1ade2eff5984be46, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 1519791646547937472, guid: d2b2070d548b54de1ade2eff5984be46, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1125,8 +1126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e27c05b0224c469b8ce232491573308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gemCollect: 01000000020000000300000004000000
+  gemHas: 00000000
   rocksCollected: 0
   backpackButton: {fileID: 60794454}
+  rocksCounter_Text: {fileID: 0}
 --- !u!1 &2125068916
 GameObject:
   m_ObjectHideFlags: 0
