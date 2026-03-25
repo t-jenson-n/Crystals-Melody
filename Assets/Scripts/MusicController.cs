@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using static Unity.VisualScripting.Member;
@@ -9,8 +10,11 @@ using static Unity.VisualScripting.Member;
 
 public class MusicController : MonoBehaviour
 {
-    public bool melodyCorrect = false;
 
+    public AudioClip[] song;
+    public AudioSource playingnow;
+
+    public bool melodyCorrect = false;
     public GameObject[] barindx;
     public bool[] check;
     public struct index2D
@@ -27,12 +31,14 @@ public class MusicController : MonoBehaviour
     public GameObject[,] bars = new GameObject[4, 6];
     public bool[,] contact = new bool[4, 6];
     public GameObject[] parentbars;
+    int playback=0;
     void Start()
     {
         check = new bool[4] { false, false, false, false };
         parentbars = new GameObject[4] { GameObject.Find("GBar"), GameObject.Find("Fbar"), GameObject.Find("CBar"), GameObject.Find("ABar") };
         barindx = new GameObject[4] { GameObject.Find("CBar (0)"), GameObject.Find("CBar (1)"), GameObject.Find("GBar (2)"), GameObject.Find("GBar (3)") };
         get_contacts();
+        //get_song();
         //print_bars();
     }
 
@@ -41,8 +47,17 @@ public class MusicController : MonoBehaviour
         melodyCorrect = wincheck();
         if (melodyCorrect == true)
         {
-            StartCoroutine(playsong());
-            this.gameObject.GetComponent<SceneChanger>().LoadGameEnd();
+            
+            playback++;
+            if (playback == 1)
+            {
+                StartCoroutine(playsong());
+                
+            }
+            else
+            {
+                playback = 2;
+            }
         }
 
     }
@@ -75,7 +90,7 @@ public class MusicController : MonoBehaviour
 
     }
 
-    void get_contacts()// initialize contact/bars
+    void get_contacts()// initialize contact/bars/audioclips
     {
         for (int i = 0; i < 4; i++)
         {
@@ -135,20 +150,25 @@ public class MusicController : MonoBehaviour
         check[indx] = false;
     }
 
+  
     IEnumerator playsong()
     {
         yield return null;
         
+        
         for (int i = 0; i < 4; i++)
         {
-            AudioSource[] sounds = barindx[i].GetComponentsInParent<AudioSource>();
-            sounds[1].Play();
-            //Debug.Log(sounds[1].name);
-            while (sounds[i].isPlaying)
+            playingnow.clip = song[i];
+            playingnow.Play();
+            Debug.Log(playingnow.clip.name);
+
+
+            while (playingnow.isPlaying)
             {
                 yield return null; 
-            }
+           }
         }
+        this.gameObject.GetComponent<SceneChanger>().LoadGameEnd();
 
     }
 }
