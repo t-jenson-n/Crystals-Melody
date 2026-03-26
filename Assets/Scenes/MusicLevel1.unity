@@ -594,16 +594,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  song:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   playingnow: {fileID: 0}
-  melodyCorrect: 0
   barindx: []
   check: 
-  parentbars: []
+  melodyCorrect: 0
 --- !u!1 &205431710
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,16 +973,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  song:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   playingnow: {fileID: 0}
-  melodyCorrect: 0
   barindx: []
   check: 
-  parentbars: []
+  melodyCorrect: 0
 --- !u!1 &308743042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,16 +2521,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  song:
-  - {fileID: 8300000, guid: 2fb21a268077444e2ba1545a51e44628, type: 3}
-  - {fileID: 8300000, guid: 2fb21a268077444e2ba1545a51e44628, type: 3}
-  - {fileID: 8300000, guid: 6bbaadd6f04654c35ae3ac7e3e63a23e, type: 3}
-  - {fileID: 8300000, guid: 6bbaadd6f04654c35ae3ac7e3e63a23e, type: 3}
   playingnow: {fileID: 946249196}
-  melodyCorrect: 0
-  barindx: []
+  barindx:
+  - {fileID: 2104155000}
+  - {fileID: 1501950248}
+  - {fileID: 842121119}
+  - {fileID: 422250201}
   check: 
-  parentbars: []
+  melodyCorrect: 0
 --- !u!82 &946249196
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2977,16 +2963,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  song:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   playingnow: {fileID: 0}
-  melodyCorrect: 0
   barindx: []
   check: 
-  parentbars: []
+  melodyCorrect: 0
 --- !u!1 &1113446962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3597,16 +3577,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  song:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   playingnow: {fileID: 0}
-  melodyCorrect: 0
   barindx: []
   check: 
-  parentbars: []
+  melodyCorrect: 0
 --- !u!1 &1315658007
 GameObject:
   m_ObjectHideFlags: 0

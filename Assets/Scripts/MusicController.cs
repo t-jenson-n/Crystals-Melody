@@ -10,14 +10,11 @@ using static Unity.VisualScripting.Member;
 
 public class MusicController : MonoBehaviour
 {
-
-    public AudioClip[] song;
-    public AudioSource playingnow;
-
-    public bool melodyCorrect = false;
-    public GameObject[] barindx;
-    public bool[] check;
-    public struct index2D
+    //public bool[,] contact = new bool[4, 6];
+    //public GameObject[] parentbars;
+    // public GameObject[,] bars = new GameObject[4, 6];
+    /*
+       public struct index2D
     {
         public int indexY;
         public int indexX;
@@ -27,17 +24,21 @@ public class MusicController : MonoBehaviour
             indexY = indxY;
             indexX = indxX;
         }
-    }
-    public GameObject[,] bars = new GameObject[4, 6];
-    public bool[,] contact = new bool[4, 6];
-    public GameObject[] parentbars;
-    int playback=0;
+    }*/
+
+    public AudioSource playingnow;
+    int playback = 0;
+
+    public GameObject[] barindx;
+    public bool[] check;
+ 
+    public bool melodyCorrect = false;
     void Start()
     {
         check = new bool[4] { false, false, false, false };
-        parentbars = new GameObject[4] { GameObject.Find("GBar"), GameObject.Find("Fbar"), GameObject.Find("CBar"), GameObject.Find("ABar") };
-        barindx = new GameObject[4] { GameObject.Find("CBar (0)"), GameObject.Find("CBar (1)"), GameObject.Find("GBar (2)"), GameObject.Find("GBar (3)") };
-        get_contacts();
+        //barindx = new GameObject[4] { GameObject.Find("CBar (0)"), GameObject.Find("CBar (1)"), GameObject.Find("GBar (2)"), GameObject.Find("GBar (3)") };
+        //parentbars = new GameObject[4] { GameObject.Find("GBar"), GameObject.Find("Fbar"), GameObject.Find("CBar"), GameObject.Find("ABar") };
+        //get_contacts();
         //get_song();
         //print_bars();
     }
@@ -73,7 +74,52 @@ public class MusicController : MonoBehaviour
         }
         return win;
     }
-    index2D get_index(GameObject[,] arr, GameObject item)
+
+    void checkCorrect(GameObject obj)
+    {
+        //Debug.Log(obj.name);
+        int indx = Array.IndexOf(barindx, obj);
+        //Debug.Log("index: "+indx);
+        check[indx] = true;
+       /* for (int i = 0; i < 4; i++)
+        {
+            Debug.Log(i + ": " + check[i]);
+        }*/
+}
+void checkFalse(GameObject obj)
+    {
+        int indx = Array.IndexOf(barindx, obj);
+        check[indx] = false;
+    }
+
+
+    IEnumerator playsong()
+    {
+
+        yield return null;
+        
+        for (int i = 0; i < 4; i++)
+        {
+            AudioSource[] source = barindx[i].transform.GetComponentsInParent<AudioSource>();
+            playingnow.clip = source[1].clip;
+            playingnow.Play();
+            Debug.Log(playingnow.clip.name);
+
+            
+            while (playingnow.isPlaying)
+            {
+                yield return null; 
+           }
+        }
+        this.gameObject.GetComponent<SceneChanger>().LoadGameEnd();
+
+    }
+
+
+
+
+    /*
+   index2D get_index(GameObject[,] arr, GameObject item)
     {
         index2D indx = new index2D(-1, -1);
         for (int i = 0; i < 4; i++)
@@ -88,7 +134,8 @@ public class MusicController : MonoBehaviour
         }
         return indx;
 
-    }
+    } 
+
 
     void get_contacts()// initialize contact/bars/audioclips
     {
@@ -134,41 +181,5 @@ public class MusicController : MonoBehaviour
         contact[indx.indexX, indx.indexY] = false;
         //print_ContactTable();
     }
-    
-    void checkCorrect(GameObject obj)
-    {
-        int indx = Array.IndexOf(barindx, obj);
-        check[indx] = true;
-       /* for (int i = 0; i < 4; i++)
-        {
-            Debug.Log(i + ": " + check[i]);
-        }*/
-    }
-    void checkFalse(GameObject obj)
-    {
-        int indx = Array.IndexOf(barindx, obj);
-        check[indx] = false;
-    }
-
-  
-    IEnumerator playsong()
-    {
-        yield return null;
-        
-        
-        for (int i = 0; i < 4; i++)
-        {
-            playingnow.clip = song[i];
-            playingnow.Play();
-            Debug.Log(playingnow.clip.name);
-
-
-            while (playingnow.isPlaying)
-            {
-                yield return null; 
-           }
-        }
-        this.gameObject.GetComponent<SceneChanger>().LoadGameEnd();
-
-    }
+    */
 }

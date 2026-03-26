@@ -28,12 +28,12 @@ public class hover_effect : MonoBehaviour
             barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
             if (collision.CompareTag(this.gameObject.tag))
             {
-                // Debug.Log("right");
+                 Debug.Log("right");
                 sounds[1].Play();
             }
             else
             {
-                // Debug.Log("wrong");
+                 Debug.Log("wrong");
                 sounds[0].Play();
             }
         }
@@ -42,7 +42,7 @@ public class hover_effect : MonoBehaviour
     {
         if (collision.transform.parent.gameObject == note)
         {
-            gameObject.SendMessageUpwards("enter_contact", this.gameObject);
+            //gameObject.SendMessageUpwards("enter_contact", this.gameObject);
             barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
             if (collision.CompareTag(this.gameObject.tag))
             {
@@ -53,7 +53,7 @@ public class hover_effect : MonoBehaviour
     private void OnTriggerExit(Collider collision)
     {
         barRenderer.material.color = Color.black;
-        gameObject.SendMessageUpwards("exit_contact", this.gameObject);
+       // gameObject.SendMessageUpwards("exit_contact", this.gameObject);
         if (collision.CompareTag(this.gameObject.tag))
          {
             gameObject.SendMessageUpwards("checkFalse", this.gameObject);
