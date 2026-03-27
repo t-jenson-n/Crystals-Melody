@@ -9493,7 +9493,7 @@ PrefabInstance:
     - target: {fileID: 7711317899692636081, guid: 5f5a4881529b21d49bbc7788b6624548, type: 3}
       propertyPath: pickupUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1637323748}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
