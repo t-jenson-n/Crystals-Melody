@@ -18,15 +18,29 @@ public class SceneChanger : MonoBehaviour
     }
 
 
-
-    public void LoadCaveLevel1()
+    public void LoadMenu()
     {
-        SceneManager.LoadScene("CaveLevel1");
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void LoadCave1()
+    {
+        SceneManager.LoadScene("Cave1");
+    }
+
+    public void LoadCave2()
+    {
+        SceneManager.LoadScene("Cave2");
     }
 
     public void LoadMusicLevel1()
     {
         SceneManager.LoadScene("MusicLevel1");
+    }
+
+    public void LoadMusicLevel2()
+    {
+        SceneManager.LoadScene("MusicLevel2");
     }
 
 
