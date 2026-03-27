@@ -9,9 +9,10 @@ using UnityEditor;
 public class SceneChanger : MonoBehaviour
 {
     public string nextScene;
-    
-    public void getNext() {
-        SceneManager.LoadScene(nextScene);
+
+    public void LoadOpener()
+    {
+        SceneManager.LoadScene("Opener");
     }
 
     public void LoadMainMenu()
