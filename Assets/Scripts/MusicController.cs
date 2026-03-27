@@ -33,8 +33,13 @@ public class MusicController : MonoBehaviour
     int playback = 0;
 
     public GameObject[] barindx;
+    public GameObject[] runeSprites;
+
     public bool[] check;
     public TextMeshProUGUI musicWin_Text;
+
+    public GameObject runes;
+
 
     public bool melodyCorrect = false;
     void Start()
@@ -62,7 +67,9 @@ public class MusicController : MonoBehaviour
             {
                 musicWin_Text.GetComponent<StatusChange>().Show();
                 StartCoroutine(playsong());
-                
+                //runes.GetComponent<Runes>().PlayAnimation();
+
+
             }
             else
             {
@@ -115,26 +122,27 @@ void checkFalse(GameObject obj)
     }
 
 
-  private IEnumerator playsong()
+    private IEnumerator playsong()
     {
 
-        yield return null;
-        
-        for (int i = 0; i < barindx.Length; i++)
-        {
-            AudioSource[] source = barindx[i].GetComponentsInParent<AudioSource>();
-            playingnow.clip = source[1].clip;
-            playingnow.Play();
-            Debug.Log(playingnow.clip.name);
+        //yield return null;
+        //runes.GetComponent<Runes>().PlayAnimation();
 
-            
-            while (playingnow.isPlaying)
-            {
-                yield return null; 
-           }
-        }
-        this.gameObject.GetComponent<SceneChanger>().getNext(next.name);
+        //for (int i = 0; i < ; i++)
 
+        //{
+        //    yield return new WaitForSeconds(runeSprites.Length);
+
+        //    while (playingnow.isPlaying)
+        //    {
+        //        yield return null;
+        //    }
+        //}
+        //this.gameObject.GetComponent<SceneChanger>().getNext(next.name);
+
+        yield return StartCoroutine(runes.GetComponent<Runes>().PlayAnimation());
+
+        GetComponent<SceneChanger>().getNext(next.name);
     }
 
 
