@@ -110,7 +110,7 @@ void checkFalse(GameObject obj)
     }
 
 
-    IEnumerator playsong()
+  private IEnumerator playsong()
     {
 
         yield return null;

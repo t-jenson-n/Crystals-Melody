@@ -359,7 +359,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 162774020}
-  - component: {fileID: 162774023}
   - component: {fileID: 162774022}
   - component: {fileID: 162774021}
   m_Layer: 0
@@ -582,23 +581,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &162774023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162774019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  next: {fileID: 0}
-  playingnow: {fileID: 0}
-  barindx: []
-  check: 
-  melodyCorrect: 0
 --- !u!1 &205431710
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +962,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 240489936}
-  - component: {fileID: 240489938}
   - component: {fileID: 240489937}
   m_Layer: 0
   m_Name: ABar
@@ -1106,23 +1087,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &240489938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240489935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  next: {fileID: 0}
-  playingnow: {fileID: 0}
-  barindx: []
-  check: 
-  melodyCorrect: 0
 --- !u!1 &308743042
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,7 +3010,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1037281769}
-  - component: {fileID: 1037281772}
   - component: {fileID: 1037281771}
   - component: {fileID: 1037281770}
   m_Layer: 0
@@ -3269,23 +3232,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1037281772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037281768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  next: {fileID: 0}
-  playingnow: {fileID: 0}
-  barindx: []
-  check: 
-  melodyCorrect: 0
 --- !u!1 &1113446962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3996,7 +3942,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1253734240}
-  - component: {fileID: 1253734242}
   - component: {fileID: 1253734241}
   m_Layer: 0
   m_Name: Fbar
@@ -4122,23 +4067,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1253734242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253734239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  next: {fileID: 0}
-  playingnow: {fileID: 0}
-  barindx: []
-  check: 
-  melodyCorrect: 0
 --- !u!1 &1315658007
 GameObject:
   m_ObjectHideFlags: 0
@@ -4642,7 +4570,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1425679379}
-  - component: {fileID: 1425679382}
   - component: {fileID: 1425679381}
   - component: {fileID: 1425679380}
   m_Layer: 0
@@ -4865,23 +4792,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1425679382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425679378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  next: {fileID: 0}
-  playingnow: {fileID: 0}
-  barindx: []
-  check: 
-  melodyCorrect: 0
 --- !u!1 &1446337350
 GameObject:
   m_ObjectHideFlags: 0
