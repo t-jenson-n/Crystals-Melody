@@ -61,6 +61,7 @@ public class Character : MonoBehaviour
         {
             //store camera based on cam with tag and store direction
             camAccess = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>(); //what a ridiculous coding language, https://discussions.unity.com/t/get-a-camera-by-tag/384618/3
+            //Got anim Coding from here: https://www.youtube.com/watch?v=Fqvxbir7HlE
             direction = camAccess.transform.eulerAngles.y;
             moveAnimator.SetBool("ifMoving", true);
             Debug.Log("Moving!");
