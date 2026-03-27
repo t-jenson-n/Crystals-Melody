@@ -4717,6 +4717,7 @@ MonoBehaviour:
   gemCollect: 01000000020000000300000004000000
   gemHas: 00000000
   rocksCollected: 0
+  rocksTotal: 3
   backpackButton: {fileID: 1775148369}
   rocksCounter_Text: {fileID: 1432689712}
 --- !u!4 &1102021424
