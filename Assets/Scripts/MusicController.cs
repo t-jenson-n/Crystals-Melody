@@ -80,7 +80,10 @@ public class MusicController : MonoBehaviour
         //Debug.Log(obj.name);
         int indx = Array.IndexOf(barindx, obj);
         //Debug.Log("index: "+indx);
-        check[indx] = true;
+        if(indx != -1)
+        {
+            check[indx] = true;
+        }
        /* for (int i = 0; i < 4; i++)
         {
             Debug.Log(i + ": " + check[i]);
@@ -89,7 +92,10 @@ public class MusicController : MonoBehaviour
 void checkFalse(GameObject obj)
     {
         int indx = Array.IndexOf(barindx, obj);
-        check[indx] = false;
+        if (indx != -1)
+        {
+            check[indx] = false;
+        }
     }
 
 
@@ -103,7 +109,7 @@ void checkFalse(GameObject obj)
             AudioSource[] source = barindx[i].transform.GetComponentsInParent<AudioSource>();
             playingnow.clip = source[1].clip;
             playingnow.Play();
-            Debug.Log(playingnow.clip.name);
+            //Debug.Log(playingnow.clip.name);
 
             
             while (playingnow.isPlaying)

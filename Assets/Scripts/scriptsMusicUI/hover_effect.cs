@@ -28,12 +28,12 @@ public class hover_effect : MonoBehaviour
             barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
             if (collision.CompareTag(this.gameObject.tag))
             {
-                 Debug.Log("right");
+                // Debug.Log("right");
                 sounds[1].Play();
             }
             else
             {
-                 Debug.Log("wrong");
+                // Debug.Log("wrong");
                 sounds[0].Play();
             }
         }
