@@ -8,6 +8,7 @@ using UnityEditor;
 
 public class SceneChanger : MonoBehaviour
 {
+    public string nextScene;
     
     public void getNext(string scene) {
         SceneManager.LoadScene(scene);
@@ -49,6 +50,7 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("GameEnd");
 
     }
+
 
     public void Quit()
     {

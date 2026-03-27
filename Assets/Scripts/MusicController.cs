@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditor.SearchService;
+//using UnityEditor;
+//using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -28,7 +28,7 @@ public class MusicController : MonoBehaviour
             indexX = indxX;
         }
     }*/
-    public SceneAsset next;
+    public string nextScene;
     public AudioSource playingnow;
     int playback = 0;
 
@@ -142,7 +142,8 @@ void checkFalse(GameObject obj)
 
         yield return StartCoroutine(runes.GetComponent<Runes>().PlayAnimation());
 
-        GetComponent<SceneChanger>().getNext(next.name);
+        //GetComponent<SceneChanger>().nextScene;
+        SceneManager.LoadScene(GetComponent<SceneChanger>().nextScene);
     }
 
 

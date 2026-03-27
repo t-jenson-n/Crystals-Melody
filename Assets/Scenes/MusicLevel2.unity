@@ -1853,6 +1853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054e77cf2963649ecaa21066542fd9bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: 
 --- !u!4 &946249194
 Transform:
   m_ObjectHideFlags: 0
@@ -1891,7 +1892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next: {fileID: 102900000, guid: 44fad9dbb798b41e7acb429d3542fb50, type: 3}
+  nextScene: '"GameEnd"'
   playingnow: {fileID: 946249196}
   barindx:
   - {fileID: 214783899}
