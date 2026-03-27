@@ -14,6 +14,7 @@ public class Character : MonoBehaviour
     public float jumpHeight = 1.0f;
     public float gravityValue = -9.81f;
     public float rotationSpeed;
+    public Animator moveAnimator;
 
     private Camera camAccess;
     private float direction;
@@ -61,10 +62,17 @@ public class Character : MonoBehaviour
             //store camera based on cam with tag and store direction
             camAccess = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>(); //what a ridiculous coding language, https://discussions.unity.com/t/get-a-camera-by-tag/384618/3
             direction = camAccess.transform.eulerAngles.y;
+            moveAnimator.SetBool("ifMoving", true);
+            Debug.Log("Moving!");
+            
+        } else if (Input.anyKey != true)
+        {
+            moveAnimator.SetBool("ifMoving", false);
+            Debug.Log("Not Moving!");
         }
 
-        //no idea what this is
-        groundedPlayer = characterController.isGrounded;
+            //no idea what this is
+            groundedPlayer = characterController.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
