@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public bool[] gemHas = { false, false, false, false };
 
     public int rocksCollected = 0;
+    public int rocksTotal;
 
     public Button backpackButton;
 
@@ -29,7 +30,7 @@ public class GameController : MonoBehaviour
     {
         rocksCounter_Text.text = "ROCKS COLLECTED: " + rocksCollected;
 
-        if (rocksCollected >= 4)
+        if (rocksCollected >= rocksTotal)
         {
             backpackButton.GetComponent<StatusChange>().Show();
 
