@@ -57,6 +57,15 @@ public class dragdrop : MonoBehaviour
         if (contact == true)
         {
             newpos = hit_obj.transform.position;
+            AudioSource[] sounds = hit_obj.GetComponentsInParent<AudioSource>();
+            if (hit_obj.CompareTag(this.gameObject.tag))
+            {
+                sounds[1].Play();
+            }
+            else
+            {
+                sounds[0].Play();
+            }
         }
         else
         {
