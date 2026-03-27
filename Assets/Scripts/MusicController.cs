@@ -35,7 +35,8 @@ public class MusicController : MonoBehaviour
     public bool melodyCorrect = false;
     void Start()
     {
-        check = new bool[4] { false, false, false, false };
+        check = new bool[5] { true, true, true, true, true };
+        set_check();
         //barindx = new GameObject[4] { GameObject.Find("CBar (0)"), GameObject.Find("CBar (1)"), GameObject.Find("GBar (2)"), GameObject.Find("GBar (3)") };
         //parentbars = new GameObject[4] { GameObject.Find("GBar"), GameObject.Find("Fbar"), GameObject.Find("CBar"), GameObject.Find("ABar") };
         //get_contacts();
@@ -61,6 +62,13 @@ public class MusicController : MonoBehaviour
             }
         }
 
+    }
+    void set_check()
+    {
+        for (int i = 0; i < barindx.Length; i++)
+        {
+            check[i] = false;
+        }
     }
     bool wincheck()
     {
@@ -104,12 +112,12 @@ void checkFalse(GameObject obj)
 
         yield return null;
         
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < barindx.Length; i++)
         {
-            AudioSource[] source = barindx[i].transform.GetComponentsInParent<AudioSource>();
+            AudioSource[] source = barindx[i].GetComponentsInParent<AudioSource>();
             playingnow.clip = source[1].clip;
             playingnow.Play();
-            //Debug.Log(playingnow.clip.name);
+            Debug.Log(playingnow.clip.name);
 
             
             while (playingnow.isPlaying)
