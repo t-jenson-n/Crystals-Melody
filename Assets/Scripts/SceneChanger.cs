@@ -18,6 +18,10 @@ public class SceneChanger : MonoBehaviour
     }
 
 
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
     public void LoadCave1()
     {
