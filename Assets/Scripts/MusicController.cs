@@ -34,7 +34,8 @@ public class MusicController : MonoBehaviour
 
     public GameObject[] barindx;
     public bool[] check;
- 
+    public TextMeshProUGUI musicWin_Text;
+
     public bool melodyCorrect = false;
     void Start()
     {
@@ -45,6 +46,9 @@ public class MusicController : MonoBehaviour
         //get_contacts();
         //get_song();
         //print_bars();
+
+        musicWin_Text.GetComponent<StatusChange>().Hide();
+
     }
 
     void Update()
@@ -56,6 +60,7 @@ public class MusicController : MonoBehaviour
             playback++;
             if (playback == 1)
             {
+                musicWin_Text.GetComponent<StatusChange>().Show();
                 StartCoroutine(playsong());
                 
             }
