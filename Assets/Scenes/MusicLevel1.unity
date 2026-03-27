@@ -359,7 +359,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 162774020}
-  - component: {fileID: 162774023}
   - component: {fileID: 162774022}
   - component: {fileID: 162774021}
   m_Layer: 0
@@ -582,22 +581,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &162774023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162774019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playingnow: {fileID: 0}
-  barindx: []
-  check: 
-  melodyCorrect: 0
 --- !u!1 &205431710
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +730,7 @@ GameObject:
   - component: {fileID: 214783902}
   - component: {fileID: 214783901}
   m_Layer: 0
-  m_Name: GBar (0)
+  m_Name: ABar (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -862,6 +845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 237490560}
   - component: {fileID: 237490559}
+  - component: {fileID: 237490561}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -946,6 +930,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &237490561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237490558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &240489935
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,7 +962,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 240489936}
-  - component: {fileID: 240489938}
   - component: {fileID: 240489937}
   m_Layer: 0
   m_Name: ABar
@@ -1081,22 +1087,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &240489938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240489935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playingnow: {fileID: 0}
-  barindx: []
-  check: 
-  melodyCorrect: 0
 --- !u!1 &308743042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,7 +1367,7 @@ GameObject:
   - component: {fileID: 402854241}
   - component: {fileID: 402854240}
   m_Layer: 0
-  m_Name: GBar (5)
+  m_Name: ABar (5)
   m_TagString: songbar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1746,6 +1736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 435380181}
   - component: {fileID: 435380180}
+  - component: {fileID: 435380182}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -1830,6 +1821,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &435380182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435380179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &453450363
 GameObject:
   m_ObjectHideFlags: 0
@@ -2764,6 +2778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  next: {fileID: 102900000, guid: 034a535f96c91a340be8007aa5aaa5c3, type: 3}
   playingnow: {fileID: 946249196}
   barindx:
   - {fileID: 2104155000}
@@ -2878,6 +2893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 989675720}
   - component: {fileID: 989675719}
+  - component: {fileID: 989675721}
   m_Layer: 0
   m_Name: Point Light (3)
   m_TagString: Untagged
@@ -2962,6 +2978,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &989675721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989675718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1037281768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2971,7 +3010,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1037281769}
-  - component: {fileID: 1037281772}
   - component: {fileID: 1037281771}
   - component: {fileID: 1037281770}
   m_Layer: 0
@@ -3194,22 +3232,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1037281772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037281768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playingnow: {fileID: 0}
-  barindx: []
-  check: 
-  melodyCorrect: 0
 --- !u!1 &1113446962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3687,7 +3709,7 @@ GameObject:
   - component: {fileID: 1221033333}
   - component: {fileID: 1221033332}
   m_Layer: 0
-  m_Name: GBar (1)
+  m_Name: ABar (1)
   m_TagString: songbar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3806,8 +3828,8 @@ GameObject:
   - component: {fileID: 1221467351}
   - component: {fileID: 1221467350}
   m_Layer: 0
-  m_Name: GBar (2)
-  m_TagString: G note
+  m_Name: ABar (2)
+  m_TagString: songbar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3920,7 +3942,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1253734240}
-  - component: {fileID: 1253734242}
   - component: {fileID: 1253734241}
   m_Layer: 0
   m_Name: Fbar
@@ -4046,22 +4067,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1253734242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253734239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playingnow: {fileID: 0}
-  barindx: []
-  check: 
-  melodyCorrect: 0
 --- !u!1 &1315658007
 GameObject:
   m_ObjectHideFlags: 0
@@ -4565,7 +4570,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1425679379}
-  - component: {fileID: 1425679382}
   - component: {fileID: 1425679381}
   - component: {fileID: 1425679380}
   m_Layer: 0
@@ -4788,22 +4792,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1425679382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425679378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playingnow: {fileID: 0}
-  barindx: []
-  check: 
-  melodyCorrect: 0
 --- !u!1 &1446337350
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,6 +4802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1446337352}
   - component: {fileID: 1446337351}
+  - component: {fileID: 1446337353}
   m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
@@ -4898,6 +4887,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1446337353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446337350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1462023677
 GameObject:
   m_ObjectHideFlags: 0
@@ -5043,6 +5055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1494393590}
   - component: {fileID: 1494393591}
+  - component: {fileID: 1494393592}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -5127,6 +5140,29 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1494393592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494393589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1501950248
 GameObject:
   m_ObjectHideFlags: 0
@@ -5883,8 +5919,8 @@ GameObject:
   - component: {fileID: 1674016016}
   - component: {fileID: 1674016015}
   m_Layer: 0
-  m_Name: GBar (3)
-  m_TagString: G note
+  m_Name: ABar (3)
+  m_TagString: songbar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6409,7 +6445,7 @@ GameObject:
   - component: {fileID: 1881578767}
   - component: {fileID: 1881578766}
   m_Layer: 0
-  m_Name: GBar (4)
+  m_Name: ABar (4)
   m_TagString: songbar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
