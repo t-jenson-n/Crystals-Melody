@@ -10,9 +10,10 @@ public class SceneChanger : MonoBehaviour
 {
     public string nextScene;
     
-    public void getNext(string scene) {
-        SceneManager.LoadScene(scene);
+    public void getNext() {
+        SceneManager.LoadScene(nextScene);
     }
+
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
