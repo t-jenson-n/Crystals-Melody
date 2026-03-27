@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class hover_effect : MonoBehaviour
-{
+{  
     private AudioSource[] sounds;
     public GameObject note;
     private Renderer barRenderer;
@@ -26,16 +26,7 @@ public class hover_effect : MonoBehaviour
         if (collision.transform.parent.gameObject == note)
         {
             barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
-            if (collision.CompareTag(this.gameObject.tag))
-            {
-                // Debug.Log("right");
-                sounds[1].Play();
-            }
-            else
-            {
-                // Debug.Log("wrong");
-                sounds[0].Play();
-            }
+           
         }
     }
     void OnTriggerStay(Collider collision)
@@ -46,12 +37,17 @@ public class hover_effect : MonoBehaviour
             barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
             if (collision.CompareTag(this.gameObject.tag))
             {
-                   gameObject.SendMessageUpwards("checkCorrect", this.gameObject);
+                gameObject.SendMessageUpwards("checkCorrect", this.gameObject);
+              
+                
             }
+         
         }
+   
     }
     private void OnTriggerExit(Collider collision)
     {
+   
         barRenderer.material.color = Color.black;
        // gameObject.SendMessageUpwards("exit_contact", this.gameObject);
         if (collision.CompareTag(this.gameObject.tag))
