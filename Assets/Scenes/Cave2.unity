@@ -606,7 +606,7 @@ PrefabInstance:
     - target: {fileID: 7806396809133443065, guid: 1925d90a38f09094fb20b7c8d8baa4d0, type: 3}
       propertyPath: pickupUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1637323748}
     - target: {fileID: 8368744115074084190, guid: 1925d90a38f09094fb20b7c8d8baa4d0, type: 3}
       propertyPath: m_Name
       value: LongSingleCave-Crystals (1)
@@ -1216,7 +1216,7 @@ PrefabInstance:
     - target: {fileID: 5293514923730648762, guid: 26bc2d62d105c334482d0ba0e8fcb25d, type: 3}
       propertyPath: pickupUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1637323748}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
