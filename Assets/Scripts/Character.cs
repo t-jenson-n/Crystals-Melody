@@ -10,9 +10,10 @@ public class Character : MonoBehaviour
     private CharacterController characterController;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
-    private float playerSpeed = 5.0f;
-    private float jumpHeight = 1.0f;
-    private float gravityValue = -9.81f;
+    public float playerSpeed = 5.0f;
+    public float jumpHeight = 1.0f;
+    public float gravityValue = -9.81f;
+    public float rotationSpeed;
 
     private Camera camAccess;
     private float direction;
@@ -54,38 +55,54 @@ public class Character : MonoBehaviour
         */
 
         //Source: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CharacterController.Move.html This is from unity official documentation, LETS GOOOOO
+        //snippet to retrieve angle of camera
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
         {
+            //store camera based on cam with tag and store direction
             camAccess = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>(); //what a ridiculous coding language, https://discussions.unity.com/t/get-a-camera-by-tag/384618/3
             direction = camAccess.transform.eulerAngles.y;
-            /* Debug.Log("Camera angle is " + direction);
-            Debug.Log("Horizontal is" + Input.GetAxis("Horizontal"));
-            Debug.Log("Vertical is" + Input.GetAxis("Vertical")); */
         }
 
+        //no idea what this is
         groundedPlayer = characterController.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
         }
 
-        //this is the movement. I don't exactly know what it means
+        //this is the movement. makes a new vector by taking horizontal and vertical inputs (wasd)
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        //make new vector, multiply y angle to change direction
         Vector3 turnedMove = Quaternion.Euler(0, direction, 0) * move; //Thank you https://discussions.unity.com/t/move-character-relative-to-camera-angle/666879/6
+        //move character based on time and speed, using turned move for direction
         characterController.Move(turnedMove * Time.deltaTime * playerSpeed);
+
+        //turning from here https://www.youtube.com/watch?v=BJzYGsMcy8Q
+        if (turnedMove != Vector3.zero)
+        {
+            //simple solution
+            //transform.forward = turnedMove;
+            Quaternion toRotation = Quaternion.LookRotation(turnedMove, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        }
 
         /*if (move != Vector3.zero)
         {
             gameObject.transform.forward = move;
         }*/
 
-        // Makes the player jump
+
+        // Makes the player jump. Removed
+        /*
         if (Input.GetButtonDown("Jump") && groundedPlayer)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
         }
+        */
 
+        //gravity
         playerVelocity.y += gravityValue * Time.deltaTime;
+        //moves the character based on y axis, tied to time rather than framerate
         characterController.Move(playerVelocity * Time.deltaTime);
     }
 }
