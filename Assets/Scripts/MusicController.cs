@@ -3,7 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static Unity.VisualScripting.Member;
 
@@ -25,7 +28,7 @@ public class MusicController : MonoBehaviour
             indexX = indxX;
         }
     }*/
-
+    public SceneAsset next;
     public AudioSource playingnow;
     int playback = 0;
 
@@ -125,7 +128,7 @@ void checkFalse(GameObject obj)
                 yield return null; 
            }
         }
-        this.gameObject.GetComponent<SceneChanger>().LoadGameEnd();
+        this.gameObject.GetComponent<SceneChanger>().getNext(next.name);
 
     }
 

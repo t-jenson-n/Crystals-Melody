@@ -8,7 +8,10 @@ using UnityEditor;
 
 public class SceneChanger : MonoBehaviour
 {
-
+    
+    public void getNext(string scene) {
+        SceneManager.LoadScene(scene);
+    }
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
