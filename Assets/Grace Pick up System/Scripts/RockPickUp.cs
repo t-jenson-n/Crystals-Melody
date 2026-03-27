@@ -23,13 +23,16 @@ public class RockPickUp : MonoBehaviour
     //On game start, turn off attached text
     void Start()
     {
+        gameController = GetComponentInParent<GameController>();
+
         pickupUI.SetActive(false);
 
-        gameController = GetComponentInParent<GameController>();
+
+
     }
 
     // void on trigger enter
-    private void OnTriggerEnter(Collider collition)
+    private void OnTriggerEnter(Collider collision)
     {
         //public GameObject popupUI;
         //private bool canPickup = false;
@@ -47,7 +50,7 @@ public class RockPickUp : MonoBehaviour
 
 
 
-        if (collition.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             Debug.Log("******* Rock can be picked up!");
 
@@ -71,11 +74,23 @@ public class RockPickUp : MonoBehaviour
 
     }
 
+    private void OnTriggerStay(Collider collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            if (!pickupUI.activeSelf)
+            {
+                pickupUI.SetActive(true);
+            }
 
-    private void OnTriggerExit(Collider collition)
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider collision)
     {
 
-        if (collition.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             playerInRange = false;
             pickupUI.SetActive(false);
