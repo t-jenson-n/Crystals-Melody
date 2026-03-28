@@ -28,6 +28,12 @@ public class dragdrop : MonoBehaviour
         transform.localScale = new Vector3(transform.localScale.x - 10f, transform.localScale.y, transform.localScale.z - 10f);
         
     }
+
+    private void OnMouseDown()
+    {
+        AudioSource sound = this.gameObject.GetComponent<AudioSource>();
+        sound.Play();
+    }
     void OnMouseDrag()//drag object
     {
         Vector3 position = GetPos();
