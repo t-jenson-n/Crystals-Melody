@@ -38,7 +38,6 @@ public class hover_effect : MonoBehaviour
             if (collision.CompareTag(this.gameObject.tag))
             {
                 gameObject.SendMessageUpwards("checkCorrect", this.gameObject);
-              
                 
             }
          
