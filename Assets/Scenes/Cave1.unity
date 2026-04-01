@@ -861,7 +861,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d1424342c410b4c418248261deb37441, type: 2}
     - target: {fileID: 919132149155446097, guid: 7e33e2e7ab0aec64aa907c015bef41f5, type: 3}
       propertyPath: m_Name
-      value: TextureTestCaveSEAWEED-Crystals
+      value: Crystal3
       objectReference: {fileID: 0}
     - target: {fileID: 6745302439343835087, guid: 7e33e2e7ab0aec64aa907c015bef41f5, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1457,7 +1457,6 @@ MonoBehaviour:
   rocksTotal: 4
   backpackButton: {fileID: 922236442}
   rocksCounter_Text: {fileID: 204856907}
-  collectedCrystals: []
 --- !u!4 &679836251
 Transform:
   m_ObjectHideFlags: 0
@@ -1956,7 +1955,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 86616ed52f14bf243a38364bbcb8e693, type: 2}
     - target: {fileID: 919132149155446097, guid: bdadf7ccd5323b7498df3f79b008204c, type: 3}
       propertyPath: m_Name
-      value: TextureTestCaveHEART-Crystals
+      value: Crystal2
       objectReference: {fileID: 0}
     - target: {fileID: 2438656852951536746, guid: bdadf7ccd5323b7498df3f79b008204c, type: 3}
       propertyPath: m_LocalScale.x
@@ -2534,7 +2533,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ba7288fca05ca684ca395407ecbe8b85, type: 2}
     - target: {fileID: 919132149155446097, guid: 793478034348190479aa7734b40acc1d, type: 3}
       propertyPath: m_Name
-      value: LongSingleCave-Crystals
+      value: Crystal4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2901,6 +2900,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 793478034348190479aa7734b40acc1d, type: 3}
   m_PrefabInstance: {fileID: 1379255525}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1556927766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1556927768}
+  - component: {fileID: 1556927767}
+  m_Layer: 0
+  m_Name: Collection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1556927767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556927766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02484ef11a3e64189be6fe5e13b2d60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectedCrystals: []
+--- !u!4 &1556927768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556927766}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -44.124863, y: 18.393957, z: -30.063559}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1578150836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3882,7 +3926,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1a4b8b717ef1b4145b6d40b5650b7a2b, type: 2}
     - target: {fileID: 919132149155446097, guid: 96c07a9ba510d6644885f31ca26733da, type: 3}
       propertyPath: m_Name
-      value: TextureTestCave-Crystals
+      value: Crystal1
       objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 96c07a9ba510d6644885f31ca26733da, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13183,3 +13227,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 679836251}
+  - {fileID: 1556927768}
