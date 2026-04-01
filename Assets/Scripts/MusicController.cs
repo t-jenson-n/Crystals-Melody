@@ -21,7 +21,7 @@ public class MusicController : MonoBehaviour
     public GameObject[] barindx;
 
     public bool[] check;
-    public TextMeshProUGUI musicWin_Text;
+    //public TextMeshProUGUI musicWin_Text;
 
     //public List<GameObject> collectedCrystals;
     public List<GameObject> rocks;
@@ -33,7 +33,7 @@ public class MusicController : MonoBehaviour
         check = new bool[5] { true, true, true, true, true };
         set_check();
 
-        musicWin_Text.GetComponent<StatusChange>().Hide();
+        //musicWin_Text.GetComponent<StatusChange>().Hide();
 
         //collectedCrystals = GetComponent<GameController>().collectedCrystals;
     }
@@ -47,7 +47,7 @@ public class MusicController : MonoBehaviour
             playback++;
             if (playback == 1)
             {
-                musicWin_Text.GetComponent<StatusChange>().Show();
+                //musicWin_Text.GetComponent<StatusChange>().Show();
                 StartCoroutine(playsong());
 
             }
