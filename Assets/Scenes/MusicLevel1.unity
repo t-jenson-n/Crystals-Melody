@@ -2129,7 +2129,6 @@ GameObject:
   m_Component:
   - component: {fileID: 852223794}
   - component: {fileID: 852223795}
-  - component: {fileID: 852223796}
   - component: {fileID: 852223798}
   - component: {fileID: 852223797}
   m_Layer: 0
@@ -2206,40 +2205,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &852223796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852223793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ae479108bf62414698b8a0ccfc264bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reRune: {fileID: 1581320993}
-  title_text: {fileID: 991782207}
-  frames:
-  - sprite: {fileID: 21300000, guid: e6daafac9979e428e8433dfeedf1d83a, type: 3}
-    sound: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: 15de6354430ec4c738a15ef05bfc9c85, type: 3}
-    sound: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: 0eb2f712e8a444441aae884e4d6253e2, type: 3}
-    sound: {fileID: 8300000, guid: 2fb21a268077444e2ba1545a51e44628, type: 3}
-  - sprite: {fileID: 21300000, guid: 9ebe4d782b4214fff8b10d73867c2301, type: 3}
-    sound: {fileID: 8300000, guid: 2fb21a268077444e2ba1545a51e44628, type: 3}
-  - sprite: {fileID: 21300000, guid: 3e0af94feaee24f8eb65f9b329c5c073, type: 3}
-    sound: {fileID: 8300000, guid: 6bbaadd6f04654c35ae3ac7e3e63a23e, type: 3}
-  - sprite: {fileID: 21300000, guid: 9db98e7488470422f87fac9eb83c029c, type: 3}
-    sound: {fileID: 8300000, guid: 6bbaadd6f04654c35ae3ac7e3e63a23e, type: 3}
-  - sprite: {fileID: 21300000, guid: a783bc33a72fb4f6da08d256f5ed2f32, type: 3}
-    sound: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: 48db78ff80eab4ef49e17e73672fa68e, type: 3}
-    sound: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: 15de6354430ec4c738a15ef05bfc9c85, type: 3}
-    sound: {fileID: 0}
-  delay: 1
 --- !u!82 &852223797
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2563,6 +2528,7 @@ GameObject:
   - component: {fileID: 946249193}
   - component: {fileID: 946249195}
   - component: {fileID: 946249196}
+  - component: {fileID: 946249197}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -2730,6 +2696,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &946249197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946249192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b179720aebc349d8a996a09ccf68bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reRune: {fileID: 0}
+  title_text: {fileID: 0}
+  frames:
+  - sprite: {fileID: 21300000, guid: 15de6354430ec4c738a15ef05bfc9c85, type: 3}
+    sound: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: 0eb2f712e8a444441aae884e4d6253e2, type: 3}
+    sound: {fileID: 0}
+  delay: 1
+  runes: {fileID: 852223793}
 --- !u!1 &965526279
 GameObject:
   m_ObjectHideFlags: 0
@@ -4958,7 +4945,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 852223796}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Runes, Assembly-CSharp
         m_MethodName: PlayAnimationButton
         m_Mode: 1

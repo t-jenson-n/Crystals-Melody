@@ -12,16 +12,22 @@ public class dragdrop : MonoBehaviour
     private Vector3 newpos;
     private GameObject hit_obj;
     private bool contact;
+    private bool inBackpack = true;
 
     private void Start()
     {
-       
         startpos = transform.position;
     }
     private void OnMouseEnter()
     {
         transform.localScale = new Vector3(transform.localScale.x+10f, transform.localScale.y, transform.localScale.z + 10f);
-        //Debug.Log("over");
+
+        //plays sound on hover but only in backpack
+        if (inBackpack)
+        {
+            AudioSource sound = this.gameObject.GetComponent<AudioSource>();
+            sound.Play();
+        }
     }
     private void OnMouseExit()
     {
@@ -29,11 +35,13 @@ public class dragdrop : MonoBehaviour
         
     }
 
-    private void OnMouseDown()
-    {
-        AudioSource sound = this.gameObject.GetComponent<AudioSource>();
-        sound.Play();
-    }
+    //plays sound on click
+    //private void OnMouseDown()
+    //{
+    //    AudioSource sound = this.gameObject.GetComponent<AudioSource>();
+    //    sound.Play();
+    //}
+
     void OnMouseDrag()//drag object
     {
         Vector3 position = GetPos();
@@ -43,19 +51,16 @@ public class dragdrop : MonoBehaviour
 
     private void OnTriggerEnter(Collider bar)//detect contact enter
     {
-        // Debug.Log("contact");
         if (bar.transform.parent.CompareTag("songbar") == true)
         {
             hit_obj = bar.gameObject;
             contact = true;
-          //  Debug.Log("contact with:" + bar.gameObject.name);
         }
     }
 
     private void OnTriggerExit(Collider bar)//detect contact exit
     {
         contact = false;
-       // Debug.Log("exited");
     }
 
     private void OnMouseUp()//return to starting position or new position
@@ -63,6 +68,7 @@ public class dragdrop : MonoBehaviour
         if (contact == true)
         {
             newpos = hit_obj.transform.position;
+            inBackpack = false;
             AudioSource[] sounds = hit_obj.GetComponentsInParent<AudioSource>();
             if (hit_obj.CompareTag(this.gameObject.tag))
             {
@@ -78,7 +84,6 @@ public class dragdrop : MonoBehaviour
             newpos = startpos;
         }
         gameObject.transform.position = newpos;
-        //rb.MovePosition(newpos);
     }
 
     private Vector3 GetPos()//get new position 

@@ -4,34 +4,29 @@ using UnityEngine.UI;
 using TMPro;
 
 
-[System.Serializable]
-public class FrameData
+public class RuneMelody : MonoBehaviour
 {
-    public Sprite sprite;
-    public AudioClip sound;
-}
+    [System.Serializable]
+    public struct FrameData
+    {
+        public Sprite sprite;
+        public AudioClip sound;
+    }
+    public FrameData[] frames;
 
-public class Runes : MonoBehaviour
-{
+    public GameObject runes;
+    private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
+
     public Button reRune;
     public TextMeshProUGUI title_text;
 
-    public FrameData[] frames;
-    public float delay = 0.1f;
-
-    private SpriteRenderer sr;
-    private AudioSource audioSource;
-    private Coroutine animCoroutine;
-
-
-    void Awake()
-    {
-        sr = GetComponent<SpriteRenderer>();
-        audioSource = GetComponent<AudioSource>();
-    }
+    public float delay;
 
     void Start()
     {
+        spriteRenderer = runes.GetComponent<SpriteRenderer>();
+        audioSource = runes.GetComponent<AudioSource>();
         StartCoroutine(PlayAnimation());
     }
 
@@ -45,7 +40,7 @@ public class Runes : MonoBehaviour
 
         for (int i = 0; i < frames.Length; i++)
         {
-            sr.sprite = frames[i].sprite;
+            spriteRenderer.sprite = frames[i].sprite;
 
             if (frames[i].sound != null && audioSource != null)
             {
@@ -62,23 +57,9 @@ public class Runes : MonoBehaviour
             title_text.gameObject.SetActive(true);
     }
 
-    IEnumerator AnimateOnce()
-    {
-        for (int i = 0; i < frames.Length; i++)
-        {
-            sr.sprite = frames[i].sprite;
-
-            if (frames[i].sound != null)
-            {
-                audioSource.PlayOneShot(frames[i].sound);
-            }
-
-            yield return new WaitForSeconds(delay);
-        }
-    }
-
     public void PlayAnimationButton()
     {
         StartCoroutine(PlayAnimation());
     }
 }
+
