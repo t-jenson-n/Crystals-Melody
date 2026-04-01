@@ -26,9 +26,6 @@ public class RockPickUp : MonoBehaviour
         gameController = GetComponentInParent<GameController>();
 
         pickupUI.SetActive(false);
-
-
-
     }
 
     // void on trigger enter
@@ -145,12 +142,15 @@ public class RockPickUp : MonoBehaviour
         {
             Debug.Log("******** Rock is picked up");
             pickupUI.SetActive(false);
-            //just dissable rock for now
-            gameObject.SetActive(false);
 
 
 
             gameController.rocksCollected += 1;
+            gameController.collectedCrystals.Add(this.gameObject);
+
+
+            //just dissable rock for now
+            gameObject.SetActive(false);
 
             Debug.Log("-----------   Added a rock : " + gameController.rocksCollected);
 

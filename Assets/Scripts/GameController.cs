@@ -9,8 +9,8 @@ using TMPro;
 public class GameController : MonoBehaviour
 {
     //storage arrays
-    public int[] gemCollect = { 1, 2, 3, 4 };
-    public bool[] gemHas = { false, false, false, false };
+    //public int[] gemCollect = { 1, 2, 3, 4 };
+    //public bool[] gemHas = { false, false, false, false };
 
     public int rocksCollected = 0;
     public int rocksTotal;
@@ -19,9 +19,13 @@ public class GameController : MonoBehaviour
 
     public TextMeshProUGUI rocksCounter_Text;
 
+    public List<GameObject> collectedCrystals;
+
 
     void Start()
     {
+        collectedCrystals = new List<GameObject>();
+
         backpackButton.GetComponent<StatusChange>().Hide();
 
     }
@@ -36,9 +40,6 @@ public class GameController : MonoBehaviour
 
             Debug.Log("?????????   Added a rock : " + rocksCollected);
         }
-
-
-
     }
 
 }

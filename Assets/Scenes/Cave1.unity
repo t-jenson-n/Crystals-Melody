@@ -1037,6 +1037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SircleCave-Crystals
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c77d406afd09bcc4097f29e6eb29b2ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 65702495048144492, guid: c77d406afd09bcc4097f29e6eb29b2ac, type: 3}
@@ -1436,6 +1440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054e77cf2963649ecaa21066542fd9bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: 
 --- !u!114 &679836250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,12 +1453,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e27c05b0224c469b8ce232491573308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemCollect: 01000000020000000300000004000000
-  gemHas: 00000000
   rocksCollected: 0
   rocksTotal: 4
   backpackButton: {fileID: 922236442}
   rocksCounter_Text: {fileID: 204856907}
+  collectedCrystals: []
 --- !u!4 &679836251
 Transform:
   m_ObjectHideFlags: 0

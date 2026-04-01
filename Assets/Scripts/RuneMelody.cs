@@ -59,11 +59,9 @@ public class RuneMelody : MonoBehaviour
 
     public void ReplayAnimation()
     {
-        GameObject[] crystals = GetComponent<MusicController>().crystals;
-
-        for (int i = 0; i < crystals.Length; i++)
+        foreach (GameObject gameObject in GetComponent<MusicController>().rocks)
         {
-            crystals[i].GetComponent<dragdrop>().ResetPos();
+            gameObject.GetComponent<dragdrop>().ResetPos();
         }
 
         StartCoroutine(PlayAnimation());

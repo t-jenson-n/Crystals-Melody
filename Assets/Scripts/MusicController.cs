@@ -23,8 +23,8 @@ public class MusicController : MonoBehaviour
     public bool[] check;
     public TextMeshProUGUI musicWin_Text;
 
-    public GameObject[] crystals;
-
+    //public List<GameObject> collectedCrystals;
+    public List<GameObject> rocks;
 
     public bool melodyCorrect = false;
 
@@ -35,6 +35,7 @@ public class MusicController : MonoBehaviour
 
         musicWin_Text.GetComponent<StatusChange>().Hide();
 
+        //collectedCrystals = GetComponent<GameController>().collectedCrystals;
     }
 
     void Update()

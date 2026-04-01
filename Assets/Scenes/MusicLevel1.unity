@@ -2597,7 +2597,7 @@ MonoBehaviour:
   - {fileID: 422250201}
   check: 
   musicWin_Text: {fileID: 205052042}
-  crystals:
+  rocks:
   - {fileID: 1929612300}
   - {fileID: 1591917646}
   - {fileID: 453450363}
@@ -4948,9 +4948,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Runes, Assembly-CSharp
-        m_MethodName: PlayAnimationButton
+      - m_Target: {fileID: 946249197}
+        m_TargetAssemblyTypeName: RuneMelody, Assembly-CSharp
+        m_MethodName: ReplayAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
