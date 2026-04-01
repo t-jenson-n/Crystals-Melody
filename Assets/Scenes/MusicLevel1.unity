@@ -2597,6 +2597,11 @@ MonoBehaviour:
   - {fileID: 422250201}
   check: 
   musicWin_Text: {fileID: 205052042}
+  crystals:
+  - {fileID: 1929612300}
+  - {fileID: 1591917646}
+  - {fileID: 453450363}
+  - {fileID: 308743042}
   melodyCorrect: 0
 --- !u!82 &946249196
 AudioSource:

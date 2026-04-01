@@ -23,8 +23,11 @@ public class MusicController : MonoBehaviour
     public bool[] check;
     public TextMeshProUGUI musicWin_Text;
 
+    public GameObject[] crystals;
+
 
     public bool melodyCorrect = false;
+
     void Start()
     {
         check = new bool[5] { true, true, true, true, true };

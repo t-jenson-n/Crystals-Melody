@@ -57,8 +57,15 @@ public class RuneMelody : MonoBehaviour
             instructions_text.gameObject.SetActive(true);
     }
 
-    public void PlayAnimationButton()
+    public void ReplayAnimation()
     {
+        GameObject[] crystals = GetComponent<MusicController>().crystals;
+
+        for (int i = 0; i < crystals.Length; i++)
+        {
+            crystals[i].GetComponent<dragdrop>().ResetPos();
+        }
+
         StartCoroutine(PlayAnimation());
     }
 }

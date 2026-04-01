@@ -10,6 +10,7 @@ public class dragdrop : MonoBehaviour
     //private Rigidbody rb;
 
     private Vector3 newpos;
+
     private GameObject hit_obj;
     private bool contact;
     private bool inBackpack = true;
@@ -91,5 +92,10 @@ public class dragdrop : MonoBehaviour
         Vector3 mouse_adj = Input.mousePosition;
         mouse_adj.z = 880f;
         return Camera.main.ScreenToWorldPoint(mouse_adj);
+    }
+
+    public void ResetPos()
+    {
+        transform.position = startpos;
     }
 }
