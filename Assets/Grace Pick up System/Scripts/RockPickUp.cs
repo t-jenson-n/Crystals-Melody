@@ -18,6 +18,10 @@ public class RockPickUp : MonoBehaviour
 
     private bool playerInRange = false;
 
+    public AudioSource note;
+    public AudioSource twinkle;
+
+
     //GameObject.tag = "Rock";
 
     //On game start, turn off attached text
@@ -35,17 +39,17 @@ public class RockPickUp : MonoBehaviour
         //private bool canPickup = false;
 
         //check tag = rocks
-        
-       /* 
 
-        if (collition.gameObject.CompareTag("Rock"))
-        {
-            Debug.Log("Rock can be picked up!");
-        }
+        /* 
 
-        */
+         if (collition.gameObject.CompareTag("Rock"))
+         {
+             Debug.Log("Rock can be picked up!");
+         }
 
+         */
 
+        twinkle.Play();
 
         if (collision.CompareTag("Player"))
         {
@@ -75,9 +79,11 @@ public class RockPickUp : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+
             if (!pickupUI.activeSelf)
             {
                 pickupUI.SetActive(true);
+
             }
 
             playerInRange = true;
@@ -127,68 +133,38 @@ public class RockPickUp : MonoBehaviour
 
     */
 
-
-
-
-
     //  unhide popup (E) ******
     private void Update()
     {
         //set to true when 
         //myButton.gameObject.SetActive(false);
 
-
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("******** Rock is picked up");
-            pickupUI.SetActive(false);
+            note.Play();
 
-
-
-            gameController.rocksCollected += 1;
-            gameController.collectedCrystals.Add(this.gameObject);
-
-
-            //just dissable rock for now
-            gameObject.SetActive(false);
-
-            Debug.Log("-----------   Added a rock : " + gameController.rocksCollected);
-
-
-
-
-            /* was tyring to 
-            if ((KeyCode.E)) == true) 
-            {
-
-                if (gemCollect == 1)
-                {
-                    gemHas[0] = true;
-                }
-                else if (gemCollect == 2)
-                {
-                    gemHas[1] = true;
-                }
-                else if (gemCollect == 3)
-                {
-                    gemHas[2] = true;
-                }
-                else if (gemCollect == 3)
-                {
-                    gemHas[3] = true;
-                }
-                else
-                {
-                    Break;
-                }
-            }
-            */
-
-
+            StartCoroutine(DelayDisable());
         }
 
 
     }
+
+    private IEnumerator DelayDisable()
+    {
+        yield return new WaitForSeconds(0.9f);
+        gameObject.SetActive(false);
+
+        Debug.Log("******** Rock is picked up");
+        pickupUI.SetActive(false);
+
+
+        gameController.rocksCollected += 1;
+        gameController.collectedCrystals.Add(this.gameObject);
+
+
+        Debug.Log("-----------   Added a rock : " + gameController.rocksCollected);
+    }
+
 
 
 }
