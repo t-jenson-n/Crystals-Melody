@@ -2595,10 +2595,8 @@ MonoBehaviour:
   - {fileID: 1501950248}
   - {fileID: 842121119}
   - {fileID: 422250201}
-  runeSprites: []
   check: 
   musicWin_Text: {fileID: 205052042}
-  runes: {fileID: 852223793}
   melodyCorrect: 0
 --- !u!82 &946249196
 AudioSource:
@@ -2708,15 +2706,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b179720aebc349d8a996a09ccf68bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reRune: {fileID: 0}
-  title_text: {fileID: 0}
   frames:
   - sprite: {fileID: 21300000, guid: 15de6354430ec4c738a15ef05bfc9c85, type: 3}
     sound: {fileID: 0}
   - sprite: {fileID: 21300000, guid: 0eb2f712e8a444441aae884e4d6253e2, type: 3}
     sound: {fileID: 0}
-  delay: 1
   runes: {fileID: 852223793}
+  reRune: {fileID: 1581320993}
+  instructions_text: {fileID: 205052042}
+  delay: 1
 --- !u!1 &965526279
 GameObject:
   m_ObjectHideFlags: 0

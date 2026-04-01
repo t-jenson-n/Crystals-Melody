@@ -19,7 +19,7 @@ public class RuneMelody : MonoBehaviour
     private AudioSource audioSource;
 
     public Button reRune;
-    public TextMeshProUGUI title_text;
+    public TextMeshProUGUI instructions_text;
 
     public float delay;
 
@@ -35,8 +35,8 @@ public class RuneMelody : MonoBehaviour
         if (reRune != null)
             reRune.gameObject.SetActive(false);
 
-        if (title_text != null)
-            title_text.gameObject.SetActive(false);
+        if (instructions_text != null)
+            instructions_text.gameObject.SetActive(false);
 
         for (int i = 0; i < frames.Length; i++)
         {
@@ -53,8 +53,8 @@ public class RuneMelody : MonoBehaviour
         if (reRune != null)
             reRune.gameObject.SetActive(true);
 
-        if (title_text != null)
-            title_text.gameObject.SetActive(true);
+        if (instructions_text != null)
+            instructions_text.gameObject.SetActive(true);
     }
 
     public void PlayAnimationButton()
