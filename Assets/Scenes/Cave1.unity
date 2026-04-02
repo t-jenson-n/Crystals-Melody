@@ -521,6 +521,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupUI: {fileID: 531277371}
+  pickupText: {fileID: 531277373}
+  requiredPress: 4
   note: {fileID: 266472143}
   twinkle: {fileID: 266472143}
 --- !u!4 &266472142 stripped
@@ -1043,6 +1045,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupUI: {fileID: 531277371}
+  pickupText: {fileID: 531277373}
+  requiredPress: 4
   note: {fileID: 329801007}
   twinkle: {fileID: 329801007}
 --- !u!4 &329801006 stripped
@@ -1315,6 +1319,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupUI: {fileID: 531277371}
+  pickupText: {fileID: 0}
+  requiredPress: 6
   note: {fileID: 0}
   twinkle: {fileID: 0}
 --- !u!4 &470429822 stripped
@@ -1335,7 +1341,7 @@ GameObject:
   - component: {fileID: 531277373}
   - component: {fileID: 531277372}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PickupText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1354,6 +1360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupUI: {fileID: 531277371}
+  pickupText: {fileID: 531277373}
+  requiredPress: 6
   note: {fileID: 0}
   twinkle: {fileID: 0}
 --- !u!114 &531277373
@@ -1376,7 +1384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PRESS [E] TO PICKUP ROCK
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d2b2070d548b54de1ade2eff5984be46, type: 2}
   m_sharedMaterial: {fileID: 1519791646547937472, guid: d2b2070d548b54de1ade2eff5984be46, type: 2}
@@ -1386,8 +1394,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280215551
-  m_fontColor: {r: 1, g: 0.90782356, b: 0.11792451, a: 1}
+    rgba: 4278773247
+  m_fontColor: {r: 1, g: 0.89685535, b: 0.033018887, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1463,14 +1471,14 @@ RectTransform:
   m_GameObject: {fileID: 531277371}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6728457, y: 1.5511355, z: 0.8864584}
+  m_LocalScale: {x: 1, y: 1, z: 0.8864584}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1189362315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22.000244, y: 481}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &610190407 stripped
@@ -2115,15 +2123,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdadf7ccd5323b7498df3f79b008204c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -124.1902
+      value: -119.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdadf7ccd5323b7498df3f79b008204c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.619999
+      value: 27.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdadf7ccd5323b7498df3f79b008204c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -928.87646
+      value: -928.88
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdadf7ccd5323b7498df3f79b008204c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2207,6 +2215,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4618040582526414715, guid: d1dc7e71f773b54448b9d8820b3b3f5e, type: 3}
   m_PrefabInstance: {fileID: 682243147585699334}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1111148835 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7834754776718938525, guid: ac26d6117bb182941a53c1d417db9271, type: 3}
+  m_PrefabInstance: {fileID: 1586466808}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1189362314
 GameObject:
@@ -3039,7 +3052,7 @@ Transform:
   m_GameObject: {fileID: 1392122548}
   serializedVersion: 2
   m_LocalRotation: {x: 0.193963, y: 0.29184908, z: 0.7800334, w: 0.51841134}
-  m_LocalPosition: {x: -113.5802, y: 38, z: -915}
+  m_LocalPosition: {x: -113.51, y: 37.95, z: -915.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3105,6 +3118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupUI: {fileID: 531277371}
+  pickupText: {fileID: 531277373}
+  requiredPress: 4
   note: {fileID: 1481047489}
   twinkle: {fileID: 1481047489}
 --- !u!4 &1481047488 stripped
@@ -3297,6 +3312,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: 6913080586095077969, guid: ac26d6117bb182941a53c1d417db9271, type: 3}
+      propertyPath: moveAnimator
+      value: 
+      objectReference: {fileID: 1111148835}
     - target: {fileID: 6913080586095077969, guid: ac26d6117bb182941a53c1d417db9271, type: 3}
       propertyPath: rotationSpeed
       value: 720
@@ -4239,6 +4258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupUI: {fileID: 531277371}
+  pickupText: {fileID: 531277373}
+  requiredPress: 4
   note: {fileID: 2133931525}
   twinkle: {fileID: 2133931525}
 --- !u!65 &2133931522

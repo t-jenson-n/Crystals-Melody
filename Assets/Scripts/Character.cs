@@ -64,16 +64,20 @@ public class Character : MonoBehaviour
             //Got anim Coding from here: https://www.youtube.com/watch?v=Fqvxbir7HlE
             direction = camAccess.transform.eulerAngles.y;
             moveAnimator.SetBool("ifMoving", true);
+            
+            //__________________________________________________
             Debug.Log("Moving!");
             
         } else if (Input.anyKey != true)
         {
             moveAnimator.SetBool("ifMoving", false);
+            
+            //__________________________________________________
             Debug.Log("Not Moving!");
         }
 
-            //no idea what this is
-            groundedPlayer = characterController.isGrounded;
+        //no idea what this is
+        groundedPlayer = characterController.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
