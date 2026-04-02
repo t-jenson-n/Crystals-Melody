@@ -19,12 +19,15 @@ public class Character : MonoBehaviour
     private Camera camAccess;
     private float direction;
 
+    public AudioSource steps;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        steps = GetComponent<AudioSource>();
     }
 
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -57,6 +60,8 @@ public class Character : MonoBehaviour
 
         //Source: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CharacterController.Move.html This is from unity official documentation, LETS GOOOOO
         //snippet to retrieve angle of camera
+
+
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
         {
             //store camera based on cam with tag and store direction
@@ -64,14 +69,14 @@ public class Character : MonoBehaviour
             //Got anim Coding from here: https://www.youtube.com/watch?v=Fqvxbir7HlE
             direction = camAccess.transform.eulerAngles.y;
             moveAnimator.SetBool("ifMoving", true);
-            
+
             //__________________________________________________
             Debug.Log("Moving!");
-            
+
         } else if (Input.anyKey != true)
         {
             moveAnimator.SetBool("ifMoving", false);
-            
+
             //__________________________________________________
             Debug.Log("Not Moving!");
         }
@@ -117,5 +122,23 @@ public class Character : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         //moves the character based on y axis, tied to time rather than framerate
         characterController.Move(playerVelocity * Time.deltaTime);
+
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            if (!steps.isPlaying)
+            {
+                StartCoroutine(playSteps());
+            }
+        }
+
+
+    }
+
+    private IEnumerator playSteps()
+    {
+        steps.Play();
+        yield return new WaitForSeconds(0.7f);
+        steps.Stop();
     }
 }
