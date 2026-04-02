@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 
@@ -13,13 +14,31 @@ using UnityEngine.UI;
 public class RockPickUp : MonoBehaviour
 {
     private GameController gameController;
+    
     //for the pop up to click E
     public GameObject pickupUI;
 
+
+    //changing text in ui 
+    public TMP_Text pickupText;
+
+
+
     private bool playerInRange = false;
+
+
+    // counter for num times E has been clicked 
+    private int ePressCount = 0;
+    //num of times E needs to be clicked before pressing Q
+    public int requiredPress = 4;
+
 
     public AudioSource note;
     public AudioSource twinkle;
+
+    // ******* ADD ROCK MINEING SOUND
+    
+
 
 
     //GameObject.tag = "Rock";
@@ -29,25 +48,17 @@ public class RockPickUp : MonoBehaviour
     {
         gameController = GetComponentInParent<GameController>();
 
+        //hides ui at beggining
         pickupUI.SetActive(false);
+
+        //first text for UI
+        UpdatePickupUI();
     }
 
     // void on trigger enter
     private void OnTriggerEnter(Collider collision)
     {
-        //public GameObject popupUI;
-        //private bool canPickup = false;
-
-        //check tag = rocks
-
-        /* 
-
-         if (collition.gameObject.CompareTag("Rock"))
-         {
-             Debug.Log("Rock can be picked up!");
-         }
-
-         */
+        
 
         twinkle.Play();
 
@@ -58,20 +69,15 @@ public class RockPickUp : MonoBehaviour
             playerInRange = true;
             //show UI
             pickupUI.SetActive(true);
-            
 
+
+            //updating the text on enter
+            UpdatePickupUI();
 
 
         }
 
 
-
-
-        //store rock
-        //rock = collision.gameObject;
-        //canPickup = true;
-
-        //popupUI.SetActive(true);
 
     }
 
@@ -87,6 +93,10 @@ public class RockPickUp : MonoBehaviour
             }
 
             playerInRange = true;
+
+            //update text again
+            UpdatePickupUI();
+
         }
     }
 
@@ -96,8 +106,13 @@ public class RockPickUp : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerInRange = false;
+            //hide ui out of range
             pickupUI.SetActive(false);
+
             Debug.Log("you are out of range ========");
+
+            //reset counter pickup to 0 for other rocks
+            ePressCount = 0;
 
 
             //pickupUI.GetComponent<Renderer>().enable = false;
@@ -106,52 +121,94 @@ public class RockPickUp : MonoBehaviour
 
 
 
-
-        /*
-
-        //void on trigger exit  *******
-        if(collition.gameObject.CompareTag("Rock") /= True)
-        {
-            //hide popup (E)  *********
-        }
-
-        */
     }
 
 
-    /*
 
-    private void OnTriggerExit(Collider collision)
-    {
-        /f (collision.gameObject.CompareTag("Rock"))
-        {
-            canPickup = false;
-            pop up hidden
-            popupUI.SetActive(false);
-        }
-    }
 
-    */
-
-    //  unhide popup (E) ******
     private void Update()
     {
-        //set to true when 
-        //myButton.gameObject.SetActive(false);
 
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        //so Q isnt getting check same frame as E
+        if (!playerInRange)
         {
-            note.Play();
-
-            StartCoroutine(DelayDisable());
+            return;
         }
 
 
+
+
+        //press E 6 --> (now 4) times and add to counter
+        if (Input.GetKeyDown(KeyCode.E) && ePressCount < requiredPress)
+        {
+
+            ePressCount++;
+
+            Debug.Log("777777777 you pressed EEEEE " + ePressCount + "times");
+
+
+            if (note != null)
+            {
+                //Change one you have the MINEING SOUND 
+                note.Play();
+
+                
+            }
+            
+            UpdatePickupUI();
+
+        }
+
+
+        // E clicked 4 times now click Q to pickup 
+        if (ePressCount >= requiredPress && Input.GetKeyDown(KeyCode.Q))
+            {
+
+                Debug.Log("111111111111111111 you pressed Q");
+                StartCoroutine(DelayDisable());
+
+
+            }
+
+
+        
+
+
     }
+
+   
+
+    private void UpdatePickupUI()
+    {
+        
+
+
+        if (pickupText == null)
+        {
+            Debug.LogError("pickupText is null on " + gameObject.name);
+
+            return; 
+        }
+
+        if(ePressCount < requiredPress)
+        {
+            pickupText.text = " PRESS [E] " + ePressCount + " / " + requiredPress + "TO MINE";
+        }
+
+        else
+        {
+            pickupText.text = " PRESS [Q] TO PICK UP";
+        }  
+
+    }
+
+
+
+
 
     private IEnumerator DelayDisable()
     {
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(0.3f);
         gameObject.SetActive(false);
 
         Debug.Log("******** Rock is picked up");
