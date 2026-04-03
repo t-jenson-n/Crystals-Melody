@@ -9,8 +9,6 @@ using UnityEngine.UI;
 using TMPro;
 
 
-
-
 public class RockPickUp : MonoBehaviour
 {
     private GameController gameController;
@@ -105,6 +103,9 @@ public class RockPickUp : MonoBehaviour
         }
     }
 
+
+
+
     private void OnTriggerExit(Collider collision)
     {
 
@@ -123,9 +124,6 @@ public class RockPickUp : MonoBehaviour
             //pickupUI.GetComponent<Renderer>().enable = false;
         }
 
-
-
-
     }
 
 
@@ -142,7 +140,6 @@ public class RockPickUp : MonoBehaviour
 
 
 
-
         //press E 6 --> (now 4) times and add to counter
         if (Input.GetKeyDown(KeyCode.E) && ePressCount < requiredPress)
         {
@@ -152,11 +149,11 @@ public class RockPickUp : MonoBehaviour
             Debug.Log("777777777 you pressed EEEEE " + ePressCount + "times");
 
 
-            if (note != null)
-            {
+            //if (note != null)
+            //{
                 //Change one you have the MINEING SOUND 
-                note.Play();
-            }
+                //note.Play();
+            //}
             
             UpdatePickupUI();
 
@@ -181,6 +178,7 @@ public class RockPickUp : MonoBehaviour
     }
 
    
+
 
     private void UpdatePickupUI()
     {
@@ -272,10 +270,7 @@ public class RockPickUp : MonoBehaviour
             Debug.LogWarning("no rigidbody --> " + rockDrop.name);
         }
 
-
-
     }
-
 
 
 
