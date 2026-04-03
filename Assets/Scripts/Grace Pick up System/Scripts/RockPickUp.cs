@@ -9,8 +9,6 @@ using UnityEngine.UI;
 using TMPro;
 
 
-
-
 public class RockPickUp : MonoBehaviour
 {
     private GameController gameController;
@@ -32,12 +30,18 @@ public class RockPickUp : MonoBehaviour
     //num of times E needs to be clicked before pressing Q
     public int requiredPress = 4;
 
+    //for inspector rocks
+    public GameObject[] outerRocks;
+
+
+
 
     public AudioSource note;
     public AudioSource twinkle;
 
     // ******* ADD ROCK MINEING SOUND
     
+
 
 
 
@@ -54,6 +58,8 @@ public class RockPickUp : MonoBehaviour
         //first text for UI
         UpdatePickupUI();
     }
+
+
 
     // void on trigger enter
     private void OnTriggerEnter(Collider collision)
@@ -100,6 +106,9 @@ public class RockPickUp : MonoBehaviour
         }
     }
 
+
+
+
     private void OnTriggerExit(Collider collision)
     {
 
@@ -118,9 +127,6 @@ public class RockPickUp : MonoBehaviour
             //pickupUI.GetComponent<Renderer>().enable = false;
         }
 
-
-
-
     }
 
 
@@ -137,7 +143,6 @@ public class RockPickUp : MonoBehaviour
 
 
 
-
         //press E 6 --> (now 4) times and add to counter
         if (Input.GetKeyDown(KeyCode.E) && ePressCount < requiredPress)
         {
@@ -147,15 +152,16 @@ public class RockPickUp : MonoBehaviour
             Debug.Log("777777777 you pressed EEEEE " + ePressCount + "times");
 
 
-            if (note != null)
-            {
-                //Change one you have the MINEING SOUND 
-                note.Play();
-
-                
-            }
+            //if (note != null)
+            //{
+                //Change one you have the MINEING SOUND   ************
+                //note.Play();
+            //}
             
             UpdatePickupUI();
+
+            //adding the droping rocks here
+            FallOutRocks();
 
         }
 
@@ -167,21 +173,17 @@ public class RockPickUp : MonoBehaviour
                 Debug.Log("111111111111111111 you pressed Q");
                 StartCoroutine(DelayDisable());
 
-
             }
-
-
-        
 
 
     }
 
    
 
+
     private void UpdatePickupUI()
     {
         
-
 
         if (pickupText == null)
         {
@@ -204,8 +206,6 @@ public class RockPickUp : MonoBehaviour
 
 
 
-
-
     private IEnumerator DelayDisable()
     {
         yield return new WaitForSeconds(0.3f);
@@ -224,14 +224,55 @@ public class RockPickUp : MonoBehaviour
 
 
 
+    //making the rocks around the crystal to drop as youre clicking E (mining) 
+    private void FallOutRocks()
+    {
+        int rockInd = ePressCount - 1;
+
+        if( outerRocks == null ||  rockInd < 0 || rockInd >= outerRocks.Length)
+        {
+            return;
+
+        }
+
+
+        GameObject rockDrop = outerRocks[rockInd];
+
+        if( rockDrop == null)
+        {
+            return ;
+        }
+
+
+        //try dopping??? (gravity off - Kinimatics on for rocks) 
+        Debug.Log("Try dropping PLEASSSEEEEEEEEE " + rockDrop.name);
+
+
+        //Physics to get the rocks to drop around the crystal
+        Rigidbody rb = rockDrop.GetComponent<Rigidbody>();
+
+        if ( rb != null)
+        {
+            rb.isKinematic = false;
+            rb.useGravity = true;
+
+            //making it fall cooler 
+            rb.AddForce(Vector3.down * 2f, ForceMode.Impulse);
+
+
+        }
+
+        else
+        {
+            Debug.LogWarning("no rigidbody --> " + rockDrop.name);
+        }
+
+    }
+
+
+
+
 }
-
-
-
-
-
-
-
 
 
 
