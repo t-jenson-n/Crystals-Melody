@@ -32,6 +32,11 @@ public class RockPickUp : MonoBehaviour
     //num of times E needs to be clicked before pressing Q
     public int requiredPress = 4;
 
+    //for inspector rocks
+    public GameObject[] outerRocks;
+
+
+
 
     public AudioSource note;
     public AudioSource twinkle;
@@ -151,11 +156,12 @@ public class RockPickUp : MonoBehaviour
             {
                 //Change one you have the MINEING SOUND 
                 note.Play();
-
-                
             }
             
             UpdatePickupUI();
+
+            //adding the droping rocks here
+            FallOutRocks();
 
         }
 
@@ -170,8 +176,6 @@ public class RockPickUp : MonoBehaviour
 
             }
 
-
-        
 
 
     }
@@ -224,10 +228,59 @@ public class RockPickUp : MonoBehaviour
 
 
 
+    //making the rocks around the crystal to drop as youre clicking E (mining) 
+    private void FallOutRocks()
+    {
+        int rockInd = ePressCount - 1;
+
+        if( outerRocks == null ||  rockInd < 0 || rockInd >= outerRocks.Length)
+        {
+
+            return;
+
+        }
+
+
+        GameObject rockDrop = outerRocks[rockInd];
+
+        if( rockDrop == null)
+        {
+            return ;
+        }
+
+
+        //try dopping??? (gravity off - Kinimatics on for rocks) 
+        Debug.Log("Try dropping PLEASSSEEEEEEEEE " + rockDrop.name);
+
+
+        //Physics to get the rocks to drop around the crystal
+        Rigidbody rb = rockDrop.GetComponent<Rigidbody>();
+
+        if ( rb != null)
+        {
+            rb.isKinematic = false;
+            rb.useGravity = true;
+
+            //making it fall cooler 
+            rb.AddForce(Vector3.down * 2f, ForceMode.Impulse);
+
+
+        }
+
+        else
+        {
+            Debug.LogWarning("no rigidbody --> " + rockDrop.name);
+        }
+
+
+
+    }
+
+
+
+
+
 }
-
-
-
 
 
 

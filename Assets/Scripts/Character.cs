@@ -66,14 +66,14 @@ public class Character : MonoBehaviour
             moveAnimator.SetBool("ifMoving", true);
             
             //__________________________________________________
-            Debug.Log("Moving!");
+            //Debug.Log("Moving!");
             
         } else if (Input.anyKey != true)
         {
             moveAnimator.SetBool("ifMoving", false);
             
             //__________________________________________________
-            Debug.Log("Not Moving!");
+            //Debug.Log("Not Moving!");
         }
 
         //no idea what this is
