@@ -149,11 +149,11 @@ public class RockPickUp : MonoBehaviour
             Debug.Log("777777777 you pressed EEEEE " + ePressCount + "times");
 
 
-            //if (note != null)
-            //{
-                //Change one you have the MINEING SOUND 
-                //note.Play();
-            //}
+            if (note != null)
+            {
+                //Change one you have the MINEING SOUND   ************
+                note.Play();
+            }
             
             UpdatePickupUI();
 
