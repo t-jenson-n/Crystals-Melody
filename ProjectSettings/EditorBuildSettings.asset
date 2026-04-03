@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 40a14c3c544f246dca2a74842d3590f5
   - enabled: 0
-    path: Assets/Scenes/Cave.unity
+    path: Assets/old files/Cave.unity
     guid: 05c8fdd654e4146d1ae4c6e31cb9eb5f
   - enabled: 1
     path: Assets/Scenes/GameEnd.unity
@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MusicLevel1.unity
     guid: de54b064cae6649ddbec97333a9486a3
   - enabled: 0
-    path: Assets/Scenes/CaveLevel1.unity
+    path: Assets/old files/CaveLevel1.unity
     guid: 00ab643778e4156448b4a0393d9f578f
   - enabled: 1
     path: Assets/Scenes/Cave2.unity

@@ -44,6 +44,7 @@ public class RockPickUp : MonoBehaviour
 
 
 
+
     //GameObject.tag = "Rock";
 
     //On game start, turn off attached text
@@ -57,6 +58,8 @@ public class RockPickUp : MonoBehaviour
         //first text for UI
         UpdatePickupUI();
     }
+
+
 
     // void on trigger enter
     private void OnTriggerEnter(Collider collision)
@@ -203,8 +206,6 @@ public class RockPickUp : MonoBehaviour
 
 
 
-
-
     private IEnumerator DelayDisable()
     {
         yield return new WaitForSeconds(0.3f);
@@ -272,10 +273,6 @@ public class RockPickUp : MonoBehaviour
 
 
 }
-
-
-
-
 
 
 
