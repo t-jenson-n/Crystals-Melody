@@ -64,15 +64,15 @@ public class Character : MonoBehaviour
             //Got anim Coding from here: https://www.youtube.com/watch?v=Fqvxbir7HlE
             direction = camAccess.transform.eulerAngles.y;
             moveAnimator.SetBool("ifMoving", true);
-            
-            //__________________________________________________
+
+            //_________________________________________________
             Debug.Log("Moving!");
             
         } else if (Input.anyKey != true)
         {
             moveAnimator.SetBool("ifMoving", false);
             
-            //__________________________________________________
+            //________________________________________
             Debug.Log("Not Moving!");
         }
 
