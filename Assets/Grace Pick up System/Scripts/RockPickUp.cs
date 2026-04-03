@@ -149,11 +149,11 @@ public class RockPickUp : MonoBehaviour
             Debug.Log("777777777 you pressed EEEEE " + ePressCount + "times");
 
 
-            if (note != null)
-            {
+            //if (note != null)
+            //{
                 //Change one you have the MINEING SOUND   ************
-                note.Play();
-            }
+                //note.Play();
+            //}
             
             UpdatePickupUI();
 
@@ -170,9 +170,7 @@ public class RockPickUp : MonoBehaviour
                 Debug.Log("111111111111111111 you pressed Q");
                 StartCoroutine(DelayDisable());
 
-
             }
-
 
 
     }
@@ -183,7 +181,6 @@ public class RockPickUp : MonoBehaviour
     private void UpdatePickupUI()
     {
         
-
 
         if (pickupText == null)
         {
@@ -233,7 +230,6 @@ public class RockPickUp : MonoBehaviour
 
         if( outerRocks == null ||  rockInd < 0 || rockInd >= outerRocks.Length)
         {
-
             return;
 
         }
