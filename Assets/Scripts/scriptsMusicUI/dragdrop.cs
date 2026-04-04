@@ -1,23 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.Experimental.AI;
 using UnityEngine.UIElements;
 
 
 public class dragdrop : MonoBehaviour
 {
     public Vector3 startpos;
-    //private Rigidbody rb;
-
+   // private Rigidbody rb;
     private Vector3 newpos;
+    //public int w = Screen.width;
+    //public int h = Screen.height;
+    //public Vector3 mpos;
 
     private GameObject hit_obj;
     private bool contact;
-    private bool inBackpack = true;
+    public bool inBackpack = true;
 
     private void Start()
     {
         startpos = transform.position;
+    }
+
+    private void Update()
+    {
+        if (transform.position == startpos) {
+            inBackpack = true;
+        }
+        else
+        {
+            inBackpack = false;
+        }
     }
     private void OnMouseEnter()
     {
@@ -26,8 +41,10 @@ public class dragdrop : MonoBehaviour
         //plays sound on hover but only in backpack
         if (inBackpack)
         {
-            AudioSource sound = this.gameObject.GetComponent<AudioSource>();
-            sound.Play();
+   
+                AudioSource sound = this.gameObject.GetComponent<AudioSource>();
+                sound.Play();
+            
         }
     }
     private void OnMouseExit()
@@ -47,11 +64,17 @@ public class dragdrop : MonoBehaviour
     {
         Vector3 position = GetPos();
         transform.position = position;
-        //rb.MovePosition(position);
+        
+       // rb.MovePosition(position);
     }
-
     private void OnTriggerEnter(Collider bar)//detect contact enter
     {
+       /* if (bar.transform.CompareTag("backpack") == true)
+        {
+            inBackpack = true;
+            Debug.Log("inbag");
+        }*/
+
         if (bar.transform.parent.CompareTag("songbar") == true)
         {
             hit_obj = bar.gameObject;
@@ -61,7 +84,14 @@ public class dragdrop : MonoBehaviour
 
     private void OnTriggerExit(Collider bar)//detect contact exit
     {
-        contact = false;
+        if (bar.transform.parent.CompareTag("songbar") == true) {
+            contact = false;
+        }
+       /* if (bar.transform.CompareTag("backpack") == true)
+        {
+            inBackpack = false;
+            Debug.Log("out of bag");
+        }*/
     }
 
     private void OnMouseUp()//return to starting position or new position
