@@ -11,6 +11,8 @@ TagManager:
   - G note
   - C note
   - A note
+  - backpack
+  - F note
   layers:
   - Default
   - TransparentFX
