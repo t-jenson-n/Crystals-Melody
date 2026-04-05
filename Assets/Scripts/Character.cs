@@ -15,7 +15,8 @@ public class Character : MonoBehaviour
     public float gravityValue = -9.81f;
     public float rotationSpeed;
     public Animator moveAnimator;
-
+    private float pickAnimTimer = 0f;
+    public float pickAnimDelay;
     private Camera camAccess;
     private float direction;
 
@@ -33,18 +34,18 @@ public class Character : MonoBehaviour
         //Code source: https://www.youtube.com/watch?v=hiXYyn9NkOo
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         characterController.Move(move * Time.deltaTime * playerSpeed);
-        */
 
-        /*
+
+
         // Source: https://discussions.unity.com/t/gravity-with-character-controller/53805/3 The problem is that its tank controls, left and right rotate rather than make character go left and right.
         transform.Rotate(0, Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime, 0);
         Vector3 vel = new Vector3(Input.GetAxis("Vertical"), 0, 0);
         vel = transform.forward * Input.GetAxis("Vertical") * charSpeed;
         //var controller = GetComponent(CharacterController);
         characterController.SimpleMove(vel);
-        */
 
-        /*
+
+
         //Source: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CharacterController.SimpleMove.html Even though this is from official unity documentation, its still tank controls. I guess that means move is better than simple move
         // Rotate around y - axis
         transform.Rotate(0, Input.GetAxis("Horizontal") * turnSpeed, 0);
@@ -54,6 +55,17 @@ public class Character : MonoBehaviour
         float curSpeed = charSpeed * Input.GetAxis("Vertical");
         characterController.SimpleMove(forward * curSpeed);
         */
+        //Found Timer code from: https://docs.unity3d.com/ScriptReference/Time-deltaTime.html
+        //decrease delay timer
+        if (pickAnimTimer > 0f)
+        {
+            pickAnimTimer -= Time.deltaTime;
+        }
+        //if it goes below 0, set it to 0
+        if (pickAnimTimer < 0f)
+        {
+            pickAnimTimer = 0f;
+        }
 
         //Source: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CharacterController.Move.html This is from unity official documentation, LETS GOOOOO
         //snippet to retrieve angle of camera
@@ -76,6 +88,13 @@ public class Character : MonoBehaviour
             Debug.Log("Not Moving!");
         }
 
+        //when user presses E, play swing anim
+        if (Input.GetKeyDown(KeyCode.E) && pickAnimTimer == 0)
+        {
+            moveAnimator.SetTrigger("ePick");
+            pickAnimTimer = pickAnimDelay;
+        }
+
         //no idea what this is
         groundedPlayer = characterController.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
@@ -95,10 +114,13 @@ public class Character : MonoBehaviour
         {
             //simple solution
             //transform.forward = turnedMove;
+
+            //better solution!
             Quaternion toRotation = Quaternion.LookRotation(turnedMove, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
 
+        //idk
         /*if (move != Vector3.zero)
         {
             gameObject.transform.forward = move;
