@@ -121,7 +121,7 @@ public class RockPickUp : MonoBehaviour
             Debug.Log("you are out of range ========");
 
             //reset counter pickup to 0 for other rocks
-            ePressCount = 0;
+            //ePressCount = 0;
 
 
             //pickupUI.GetComponent<Renderer>().enable = false;
@@ -194,7 +194,7 @@ public class RockPickUp : MonoBehaviour
 
         if(ePressCount < requiredPress)
         {
-            pickupText.text = " PRESS [E] " + ePressCount + " / " + requiredPress + "TO MINE";
+            pickupText.text = " PRESS [E] " + ePressCount + " / " + requiredPress + " TO MINE";
         }
 
         else
