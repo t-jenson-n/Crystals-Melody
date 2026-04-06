@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MusicLevel2.unity
     guid: bc395a0f36101e04f8b8a080c1268c10
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 906d5146d62dfd54fb0442e91a68204f
   m_configObjects: {}
