@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI rocksCounter_Text;
 
     public List<GameObject> collectedCrystals;
-
+    public AudioSource[] trowelSounds;
 
     void Start()
     {
