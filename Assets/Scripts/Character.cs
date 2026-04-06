@@ -86,7 +86,6 @@ public class Character : MonoBehaviour
             moveAnimator.SetBool("ifMoving", false);
             
             //________________________________________
-            Debug.Log("Not Moving!");
         }
 
         //when user presses E, play swing anim
