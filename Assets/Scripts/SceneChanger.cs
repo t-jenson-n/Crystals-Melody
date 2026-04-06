@@ -10,6 +10,11 @@ public class SceneChanger : MonoBehaviour
 {
     public string nextScene;
 
+    public void LoadScene(string theScene)
+    {
+        SceneManager.LoadScene(theScene);
+    }
+
     public void LoadOpener()
     {
         SceneManager.LoadScene("Opener");
@@ -24,6 +29,11 @@ public class SceneChanger : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void LoadIntro()
+    {
+        SceneManager.LoadScene("Intro");
     }
 
     public void LoadCave1()
