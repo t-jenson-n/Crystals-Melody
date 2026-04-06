@@ -22,6 +22,7 @@ public class RockPickUp : MonoBehaviour
 
 
 
+
     private bool playerInRange = false;
 
 
@@ -40,8 +41,11 @@ public class RockPickUp : MonoBehaviour
     public AudioSource twinkle;
 
     // ******* ADD ROCK MINEING SOUND
-    
 
+    private AudioSource trowel1and3;
+    private AudioSource trowel2;
+    private AudioSource trowel4;
+    private AudioSource[] trowelSounds;
 
 
 
@@ -57,7 +61,14 @@ public class RockPickUp : MonoBehaviour
 
         //first text for UI
         UpdatePickupUI();
+
+
+        trowelSounds = gameController.trowelSounds;
+        trowel1and3 = trowelSounds[0];
+        trowel2 = trowelSounds[1];
+        trowel4 = trowelSounds[2];
     }
+
 
 
 
@@ -151,13 +162,25 @@ public class RockPickUp : MonoBehaviour
 
             Debug.Log("777777777 you pressed EEEEE " + ePressCount + "times");
 
-
             //if (note != null)
             //{
-                //Change one you have the MINEING SOUND   ************
-                //note.Play();
+            //Change one you have the MINEING SOUND   ************
+            //note.Play();
             //}
-            
+
+            if (ePressCount == 1 || ePressCount == 3)
+            {
+                trowel1and3.Play();
+            }
+            if (ePressCount == 2)
+            {
+                trowel2.Play();
+            }
+            if (ePressCount == 4)
+            {
+                trowel4.Play();
+            }
+
             UpdatePickupUI();
 
             //adding the droping rocks here
