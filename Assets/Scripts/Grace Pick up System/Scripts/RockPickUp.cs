@@ -192,7 +192,7 @@ public class RockPickUp : MonoBehaviour
         // E clicked 4 times now click Q to pickup 
         if (ePressCount >= requiredPress && Input.GetKeyDown(KeyCode.Q))
             {
-
+                note.Play();
                 Debug.Log("111111111111111111 you pressed Q");
                 StartCoroutine(DelayDisable());
 
