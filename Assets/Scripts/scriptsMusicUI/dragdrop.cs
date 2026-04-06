@@ -36,7 +36,7 @@ public class dragdrop : MonoBehaviour
     }
     private void OnMouseEnter()
     {
-        transform.localScale = new Vector3(transform.localScale.x+10f, transform.localScale.y, transform.localScale.z + 10f);
+        //transform.localScale = new Vector3(transform.localScale.x+10f, transform.localScale.y, transform.localScale.z + 10f);
 
         //plays sound on hover but only in backpack
         if (inBackpack)
@@ -49,7 +49,7 @@ public class dragdrop : MonoBehaviour
     }
     private void OnMouseExit()
     {
-        transform.localScale = new Vector3(transform.localScale.x - 10f, transform.localScale.y, transform.localScale.z - 10f);
+        //transform.localScale = new Vector3(transform.localScale.x - 10f, transform.localScale.y, transform.localScale.z - 10f);
         
     }
 
