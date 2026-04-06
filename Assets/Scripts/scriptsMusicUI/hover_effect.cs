@@ -14,8 +14,7 @@ public class hover_effect : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-
+    {   note = GameObject.Find("Notes");
         sounds = GetComponentsInParent<AudioSource>();
         barRenderer = GetComponent<Renderer>();
 
@@ -38,7 +37,7 @@ public class hover_effect : MonoBehaviour
             if (collision.CompareTag(this.gameObject.tag))
             {
                 gameObject.SendMessageUpwards("checkCorrect", this.gameObject);
-              
+               
                 
             }
          

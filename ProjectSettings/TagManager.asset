@@ -8,11 +8,19 @@ TagManager:
   - songbar
   - Rock
   - Special
-  - G note
-  - C note
-  - A note
   - backpack
+  - Gnote
+  - Bnote
+  - Fnote
+  - Elnote
+  - Ehnote
+  - Dnote
+  - A note
+  - G note
+  - Cnote
   - F note
+  - C note
+  - Flnote
   layers:
   - Default
   - TransparentFX

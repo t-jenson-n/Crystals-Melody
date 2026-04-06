@@ -68,7 +68,7 @@ public class MusicController : MonoBehaviour
     bool wincheck()
     {
         bool win = true;
-        for (int i = 0; i < check.Length; i++)
+        for (int i = 0; i < barindx.Length; i++)
         {
             if (check[i] == false)
             {
@@ -87,10 +87,10 @@ public class MusicController : MonoBehaviour
         {
             check[indx] = true;
         }
-       /* for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 4; i++)
         {
             Debug.Log(i + ": " + check[i]);
-        }*/
+        }
 }
 void checkFalse(GameObject obj)
     {
