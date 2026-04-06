@@ -3939,7 +3939,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 30938267867094c4292fb589f0cacb86, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4035,7 +4035,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5b8ff069bb687475e8395259652b6969, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4131,7 +4131,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 030c39bf09fb24000b8f4458253292ba, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4223,7 +4223,7 @@ AudioDistortionFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679836248}
   m_Enabled: 1
-  m_DistortionLevel: 0.7
+  m_DistortionLevel: 0.5
 --- !u!1001 &748580475
 PrefabInstance:
   m_ObjectHideFlags: 0
