@@ -251,6 +251,7 @@ public class RockPickUp : MonoBehaviour
     //making the rocks around the crystal to drop as youre clicking E (mining) 
     private void FallOutRocks()
     {
+        Debug.Log("reached here?");
         int rockInd = ePressCount - 1;
 
         if( outerRocks == null ||  rockInd < 0 || rockInd >= outerRocks.Length)
