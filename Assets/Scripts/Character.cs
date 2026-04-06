@@ -19,6 +19,7 @@ public class Character : MonoBehaviour
     public float pickAnimDelay;
     private Camera camAccess;
     private float direction;
+    public GameObject MenuStatus;
 
     void Start()
     {
@@ -69,7 +70,7 @@ public class Character : MonoBehaviour
 
         //Source: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/CharacterController.Move.html This is from unity official documentation, LETS GOOOOO
         //snippet to retrieve angle of camera
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) && MenuStatus == false)
         {
             //store camera based on cam with tag and store direction
             camAccess = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>(); //what a ridiculous coding language, https://discussions.unity.com/t/get-a-camera-by-tag/384618/3
@@ -139,5 +140,18 @@ public class Character : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         //moves the character based on y axis, tied to time rather than framerate
         characterController.Move(playerVelocity * Time.deltaTime);
+    
+    
+    
+        //TRYING TO ADD SOMETHING FOR MENU++++++++++++++++
+        //if (gameObject.Find("MenuManager").GetComponent<MenuManager>().MenuStatus)
+        //{
+            //Horizontal = Input.GetAxis("Horizontal");
+        //}
+       // else
+        //{
+            //horizontal = 0;
+        //}
+    
     }
 }
