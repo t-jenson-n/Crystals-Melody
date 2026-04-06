@@ -1372,6 +1372,7 @@ RectTransform:
   m_Children:
   - {fileID: 78080952}
   - {fileID: 1910420617}
+  - {fileID: 1692017006}
   m_Father: {fileID: 1189362315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -7178,7 +7179,6 @@ RectTransform:
   - {fileID: 922236440}
   - {fileID: 1527668173}
   - {fileID: 190081332}
-  - {fileID: 1692017006}
   - {fileID: 77324162}
   m_Father: {fileID: 679836251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7816,7 +7816,7 @@ GameObject:
   - component: {fileID: 1281962617}
   - component: {fileID: 1281962616}
   m_Layer: 0
-  m_Name: caveSoundTwo
+  m_Name: cave sound-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10590,14 +10590,14 @@ RectTransform:
   m_GameObject: {fileID: 1692017005}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 657499056}
   - {fileID: 422068664}
   - {fileID: 1125507467}
   - {fileID: 1209104140}
-  m_Father: {fileID: 1189362315}
+  m_Father: {fileID: 190081332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
