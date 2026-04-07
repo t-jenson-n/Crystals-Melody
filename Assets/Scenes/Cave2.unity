@@ -17002,9 +17002,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1102021422}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: LoadMusicLevel1
+        m_MethodName: LoadMusicLevel2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
