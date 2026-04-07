@@ -3643,7 +3643,7 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 0f050438de1284ea7918fc47b5e3d494, type: 3}
     sound: {fileID: 8300000, guid: 0e768e06a5274487b806e940f349ab2e, type: 3}
   - sprite: {fileID: 21300000, guid: c2ee2cf007c8f466aa91374f1d4dd47d, type: 3}
-    sound: {fileID: 8300000, guid: 2c2e88421415b4c2fa89d013741700f0, type: 3}
+    sound: {fileID: 8300000, guid: a4a112937ccb9493e8deae85306b674c, type: 3}
   runes: {fileID: 406250421}
   reRune: {fileID: 634626037}
   instructions_text: {fileID: 263374506}
