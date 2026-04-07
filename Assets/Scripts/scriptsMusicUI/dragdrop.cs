@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 public class dragdrop : MonoBehaviour
 {
     public Vector3 startpos;
-   // private Rigidbody rb;
+   //private Rigidbody rb;
     private Vector3 newpos;
     //public int w = Screen.width;
     //public int h = Screen.height;
@@ -63,7 +63,7 @@ public class dragdrop : MonoBehaviour
     void OnMouseDrag()//drag object
     {
         Vector3 position = GetPos();
-        transform.position = position;
+        this.gameObject.transform.position = position;
         
        // rb.MovePosition(position);
     }
