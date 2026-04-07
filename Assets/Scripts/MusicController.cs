@@ -87,10 +87,10 @@ public class MusicController : MonoBehaviour
         {
             check[indx] = true;
         }
-        for (int i = 0; i < 4; i++)
-        {
-            Debug.Log(i + ": " + check[i]);
-        }
+       // for (int i = 0; i < 4; i++)
+        //{
+          //  Debug.Log(i + ": " + check[i]);
+        //}
 }
 void checkFalse(GameObject obj)
     {
