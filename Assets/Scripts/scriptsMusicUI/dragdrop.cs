@@ -23,8 +23,8 @@ public class dragdrop : MonoBehaviour
     private void Start()
     {
         startpos = transform.position;
-        //glow = GetComponentInChildren<GameObject>();
-
+ 
+      //glow = GetComponentInChildren<GameObject>();
 
     }
 

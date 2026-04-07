@@ -3978,10 +3978,10 @@ MonoBehaviour:
   - {fileID: 1351802323}
   check: 
   rocks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 834955927}
+  - {fileID: 381663325}
+  - {fileID: 1747902379}
+  - {fileID: 1338416058}
   melodyCorrect: 0
 --- !u!114 &815196312
 MonoBehaviour:
