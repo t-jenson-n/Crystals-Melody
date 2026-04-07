@@ -46,16 +46,30 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("Cave2");
     }
 
+    public void LoadCave3()
+    {
+        SceneManager.LoadScene("Cave3");
+    }
+
     public void LoadMusicLevel1()
     {
-        SceneManager.LoadScene("MusicLevel1");
+        SceneManager.LoadScene("Music1");
     }
 
     public void LoadMusicLevel2()
     {
-        SceneManager.LoadScene("MusicLevel2");
+        SceneManager.LoadScene("Music2");
     }
 
+    public void LoadMusicLevel3()
+    {
+        SceneManager.LoadScene("Music3");
+    }
+
+    public void LoadOutro()
+    {
+        SceneManager.LoadScene("Outro");
+    }
 
     public void LoadGameEnd()
     {
