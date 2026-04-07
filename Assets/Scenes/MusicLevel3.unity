@@ -3731,7 +3731,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frames:
-  - sprite: {fileID: 21300000, guid: db84288c65c594b48bbe50cc9c0858cf, type: 3}
+  - sprite: {fileID: 21300000, guid: 01b0e14ffe4114e3898d48f4b85e08fa, type: 3}
+    sound: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: d6af7b8bc5d024fb9819ca8874021b7d, type: 3}
+    sound: {fileID: 8300000, guid: 68d447f405b2a4f9185bfcf7e1d26e0e, type: 3}
+  - sprite: {fileID: 21300000, guid: 4bb142fe7a76140b49bf8919904235d9, type: 3}
+    sound: {fileID: 8300000, guid: ae3474bd9c32b40b2bedd427149298f8, type: 3}
+  - sprite: {fileID: 21300000, guid: 44cdbe885f58942b49ffe4045ee9740b, type: 3}
+    sound: {fileID: 8300000, guid: e2530837405ae4867bf8be41e1754daa, type: 3}
+  - sprite: {fileID: 21300000, guid: 77ef2cecd4a234eba8668aa96b110d2b, type: 3}
+    sound: {fileID: 8300000, guid: bb52b82ddf6974be687e427ed59fa1a8, type: 3}
+  - sprite: {fileID: 21300000, guid: 63e61de6e0e454f11b1c394bd015adbb, type: 3}
     sound: {fileID: 8300000, guid: 2c2e88421415b4c2fa89d013741700f0, type: 3}
   runes: {fileID: 852223793}
   reRune: {fileID: 1581320993}

@@ -2861,6 +2861,7 @@ GameObject:
   - component: {fileID: 946249193}
   - component: {fileID: 946249195}
   - component: {fileID: 946249196}
+  - component: {fileID: 946249197}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -3027,6 +3028,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &946249197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946249192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b179720aebc349d8a996a09ccf68bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frames:
+  - sprite: {fileID: 21300000, guid: 55deb7cc365e54efc9e83a0eedeb8992, type: 3}
+    sound: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: 3bda05484f02946179aa9185c0c65c96, type: 3}
+    sound: {fileID: 8300000, guid: b1997f54f1dab495a82e66068c83e2f0, type: 3}
+  - sprite: {fileID: 21300000, guid: 52ac9faccbe024088a3c4fbce3edaba7, type: 3}
+    sound: {fileID: 8300000, guid: 1483542644fb74bc1913460614275ed9, type: 3}
+  - sprite: {fileID: 21300000, guid: cfc433090b24147ce91e80d5381fc149, type: 3}
+    sound: {fileID: 8300000, guid: e2530837405ae4867bf8be41e1754daa, type: 3}
+  - sprite: {fileID: 21300000, guid: e1a01f1dd78664ee28206fdd5362a394, type: 3}
+    sound: {fileID: 8300000, guid: b1997f54f1dab495a82e66068c83e2f0, type: 3}
+  - sprite: {fileID: 21300000, guid: fcf37150576f6411fa1371befad03884, type: 3}
+    sound: {fileID: 8300000, guid: 2c2e88421415b4c2fa89d013741700f0, type: 3}
+  runes: {fileID: 1614852128}
+  reRune: {fileID: 0}
+  instructions_text: {fileID: 0}
+  delay: 1
 --- !u!1 &958448211
 GameObject:
   m_ObjectHideFlags: 0
