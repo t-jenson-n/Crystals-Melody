@@ -4156,7 +4156,7 @@ MonoBehaviour:
   - {fileID: 1351802323}
   check: 
   rocks:
-  - {fileID: 0}
+  - {fileID: 372786856}
   - {fileID: 79713868}
   - {fileID: 1910726644}
   - {fileID: 3766649}
