@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cave3.unity
     guid: 93af37280e977884bbd971c8fb152f6e
+  - enabled: 1
+    path: Assets/Scenes/Outro.unity
+    guid: a7d47cc723dfbd849871886af0aca3d8
   m_configObjects: {}
