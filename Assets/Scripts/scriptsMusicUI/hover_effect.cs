@@ -5,7 +5,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class hover_effect : MonoBehaviour
-{  
+{
+    public bool contact;
     private AudioSource[] sounds;
     public GameObject note;
     private Renderer barRenderer;
@@ -21,9 +22,11 @@ public class hover_effect : MonoBehaviour
     }
     void OnTriggerEnter(Collider collision)
     {
+        contact = true;
         //EditorUtility.DisplayDialog("working?", "working", "ok", "cancel");
         if (collision.transform.parent.gameObject == note)
         {
+            //Debug.Log("contact");
             //barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
            
         }
@@ -46,7 +49,7 @@ public class hover_effect : MonoBehaviour
     }
     private void OnTriggerExit(Collider collision)
     {
-   
+        contact = false;
         barRenderer.material.color = Color.black;
        // gameObject.SendMessageUpwards("exit_contact", this.gameObject);
         if (collision.CompareTag(this.gameObject.tag))
