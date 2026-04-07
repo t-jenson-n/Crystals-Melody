@@ -18,10 +18,14 @@ public class dragdrop : MonoBehaviour
     private GameObject hit_obj;
     private bool contact;
     public bool inBackpack = true;
+    public GameObject glow;
 
     private void Start()
     {
         startpos = transform.position;
+        glow = GetComponentInChildren<GameObject>();
+
+
     }
 
     private void Update()
@@ -38,6 +42,7 @@ public class dragdrop : MonoBehaviour
     {
         //transform.localScale = new Vector3(transform.localScale.x+10f, transform.localScale.y, transform.localScale.z + 10f);
 
+        glow.SetActive(true);
         //plays sound on hover but only in backpack
         if (inBackpack)
         {
@@ -49,19 +54,25 @@ public class dragdrop : MonoBehaviour
     }
     private void OnMouseExit()
     {
+        glow.SetActive(false);
+
         //transform.localScale = new Vector3(transform.localScale.x - 10f, transform.localScale.y, transform.localScale.z - 10f);
-        
+
     }
 
-    //plays sound on click
+    ////glows on click
     //private void OnMouseDown()
     //{
-    //    AudioSource sound = this.gameObject.GetComponent<AudioSource>();
-    //    sound.Play();
+    //    glow.SetActive(true);
+
+    //    //AudioSource sound = this.gameObject.GetComponent<AudioSource>();
+    //    //sound.Play();
     //}
 
     void OnMouseDrag()//drag object
     {
+        glow.SetActive(false);
+
         Vector3 position = GetPos();
         this.gameObject.transform.position = position;
         
@@ -69,11 +80,11 @@ public class dragdrop : MonoBehaviour
     }
     private void OnTriggerEnter(Collider bar)//detect contact enter
     {
-       /* if (bar.transform.CompareTag("backpack") == true)
-        {
-            inBackpack = true;
-            Debug.Log("inbag");
-        }*/
+        /* if (bar.transform.CompareTag("backpack") == true)
+         {
+             inBackpack = true;
+             Debug.Log("inbag");
+         }*/
 
         if (bar.transform.parent.CompareTag("songbar") == true)
         {
