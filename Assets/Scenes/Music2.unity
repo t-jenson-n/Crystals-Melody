@@ -611,6 +611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: -1088, y: 280, z: 880}
   inBackpack: 1
+  glow: {fileID: 0}
 --- !u!1 &79713868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 793478034348190479aa7734b40acc1d, type: 3}
@@ -656,6 +657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: 0, y: 0, z: 0}
   inBackpack: 1
+  glow: {fileID: 1655773142}
 --- !u!54 &79713874
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1381,6 +1383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: -1088, y: 280, z: 880}
   inBackpack: 1
+  glow: {fileID: 0}
 --- !u!1 &263374505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,6 +2129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: 0, y: 0, z: 0}
   inBackpack: 1
+  glow: {fileID: 1871437745}
 --- !u!54 &358556936
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2932,6 +2936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: -1088, y: 280, z: 880}
   inBackpack: 1
+  glow: {fileID: 0}
 --- !u!4 &555996003
 Transform:
   m_ObjectHideFlags: 0
@@ -5128,6 +5133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: -1088, y: 280, z: 880}
   inBackpack: 1
+  glow: {fileID: 0}
 --- !u!1 &1028663039
 GameObject:
   m_ObjectHideFlags: 0
@@ -6073,6 +6079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: 0, y: 0, z: 0}
   inBackpack: 1
+  glow: {fileID: 245558543}
 --- !u!135 &1285118138
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8156,6 +8163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: 0, y: 0, z: 0}
   inBackpack: 1
+  glow: {fileID: 838186753}
 --- !u!54 &1910726650
 Rigidbody:
   m_ObjectHideFlags: 0
