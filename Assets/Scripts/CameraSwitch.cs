@@ -37,6 +37,7 @@ public class CameraSwitch : MonoBehaviour
         }
     }
 
+
     /*
     //This is part of the old method, ignore this existence
     private void OnTriggerEnter(Collider other)
