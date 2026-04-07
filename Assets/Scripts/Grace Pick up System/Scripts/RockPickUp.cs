@@ -63,6 +63,7 @@ public class RockPickUp : MonoBehaviour
         UpdatePickupUI();
 
 
+
         trowelSounds = gameController.trowelSounds;
         trowel1and3 = trowelSounds[0];
         trowel2 = trowelSounds[1];
@@ -192,6 +193,8 @@ public class RockPickUp : MonoBehaviour
         // E clicked 4 times now click Q to pickup 
         if (ePressCount >= requiredPress && Input.GetKeyDown(KeyCode.Q))
             {
+                note.Play();
+
                 Debug.Log("111111111111111111 you pressed Q");
                 StartCoroutine(DelayDisable());
 
@@ -230,10 +233,9 @@ public class RockPickUp : MonoBehaviour
 
     private IEnumerator DelayDisable()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.75f);
         gameObject.SetActive(false);
 
-        note.Play();
 
         Debug.Log("******** Rock is picked up");
         pickupUI.SetActive(false);
