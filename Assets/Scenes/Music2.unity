@@ -3812,7 +3812,7 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: e1a01f1dd78664ee28206fdd5362a394, type: 3}
     sound: {fileID: 8300000, guid: b1997f54f1dab495a82e66068c83e2f0, type: 3}
   - sprite: {fileID: 21300000, guid: fcf37150576f6411fa1371befad03884, type: 3}
-    sound: {fileID: 8300000, guid: 2c2e88421415b4c2fa89d013741700f0, type: 3}
+    sound: {fileID: 8300000, guid: 78817e23fe4ea4741917cac3c920038a, type: 3}
   runes: {fileID: 406250421}
   reRune: {fileID: 634626037}
   instructions_text: {fileID: 263374506}
