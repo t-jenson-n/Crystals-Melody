@@ -24,7 +24,7 @@ public class hover_effect : MonoBehaviour
         //EditorUtility.DisplayDialog("working?", "working", "ok", "cancel");
         if (collision.transform.parent.gameObject == note)
         {
-            barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
+            //barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
            
         }
     }
@@ -33,7 +33,7 @@ public class hover_effect : MonoBehaviour
         if (collision.transform.parent.gameObject == note)
         {
             //gameObject.SendMessageUpwards("enter_contact", this.gameObject);
-            barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
+            //barRenderer.material.color = collision.GetComponent<Renderer>().material.color;
             if (collision.CompareTag(this.gameObject.tag))
             {
                 gameObject.SendMessageUpwards("checkCorrect", this.gameObject);
