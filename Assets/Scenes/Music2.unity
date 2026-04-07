@@ -3925,7 +3925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126551d3c97fe31468377a2579488ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 
+  nextScene: Cave3
   playingnow: {fileID: 815196310}
   barindx:
   - {fileID: 838741531}

@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameEnd.unity
     guid: 44fad9dbb798b41e7acb429d3542fb50
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MusicLevel1.unity
     guid: de54b064cae6649ddbec97333a9486a3
   - enabled: 0
@@ -29,10 +29,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Opener.unity
     guid: d3185e840fd9a4e82aab8f712a11128c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MusicLevel2.unity
     guid: bc395a0f36101e04f8b8a080c1268c10
   - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: 906d5146d62dfd54fb0442e91a68204f
+  - enabled: 1
+    path: Assets/Scenes/Music1.unity
+    guid: 85d492859977a4bf3a8cbed52ae9c79b
+  - enabled: 1
+    path: Assets/Scenes/Music2.unity
+    guid: fd8f03059e4d4ab45918d21968586050
+  - enabled: 1
+    path: Assets/Scenes/Music3.unity
+    guid: 066503b5d030b0543840e15cda395c5d
+  - enabled: 1
+    path: Assets/Scenes/Cave3.unity
+    guid: 93af37280e977884bbd971c8fb152f6e
+  - enabled: 1
+    path: Assets/Scenes/Outro.unity
+    guid: a7d47cc723dfbd849871886af0aca3d8
   m_configObjects: {}
