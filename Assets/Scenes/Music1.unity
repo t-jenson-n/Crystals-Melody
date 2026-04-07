@@ -611,6 +611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: -1088, y: 280, z: 880}
   inBackpack: 1
+  glow: {fileID: 0}
 --- !u!1 &79713868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 793478034348190479aa7734b40acc1d, type: 3}
@@ -656,6 +657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: 0, y: 0, z: 0}
   inBackpack: 1
+  glow: {fileID: 1655773142}
 --- !u!54 &79713874
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1044,7 +1046,7 @@ Transform:
   m_GameObject: {fileID: 245558543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.11229669, w: 0.99367476}
-  m_LocalPosition: {x: -3.2566316, y: -4.7756195, z: -3.9419022}
+  m_LocalPosition: {x: -3.2566316, y: -4.7756195, z: -3.1}
   m_LocalScale: {x: 0.87625, y: 0.87625, z: 0.87625}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1381,6 +1383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: -1088, y: 280, z: 880}
   inBackpack: 1
+  glow: {fileID: 0}
 --- !u!1 &263374505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2764,6 +2767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: -1088, y: 280, z: 880}
   inBackpack: 1
+  glow: {fileID: 0}
 --- !u!4 &555996003
 Transform:
   m_ObjectHideFlags: 0
@@ -4981,6 +4985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: -1088, y: 280, z: 880}
   inBackpack: 1
+  glow: {fileID: 0}
 --- !u!1 &1028663039
 GameObject:
   m_ObjectHideFlags: 0
@@ -5926,6 +5931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: 0, y: 0, z: 0}
   inBackpack: 1
+  glow: {fileID: 245558543}
 --- !u!135 &1285118138
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7281,7 +7287,7 @@ Transform:
   m_GameObject: {fileID: 1655773142}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7149991, y: 0.5824071, z: 0.36721954, w: 0.12135942}
-  m_LocalPosition: {x: 203.73997, y: -90.96223, z: -327.78577}
+  m_LocalPosition: {x: 2, y: -62, z: -64}
   m_LocalScale: {x: 1.9460553, y: 1.946055, z: 1.9460553}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7746,6 +7752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: 0, y: 0, z: 0}
   inBackpack: 1
+  glow: {fileID: 838186753}
 --- !u!54 &1910726650
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8652,15 +8659,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 793478034348190479aa7734b40acc1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1274.2
+      value: 1257
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 793478034348190479aa7734b40acc1d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 276.22
+      value: 475
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 793478034348190479aa7734b40acc1d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -891
+      value: -883
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 793478034348190479aa7734b40acc1d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8821,6 +8828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startpos: {x: 0, y: 0, z: 0}
   inBackpack: 1
+  glow: {fileID: 827232417}
 --- !u!82 &2112701142
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8832,7 +8840,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1483542644fb74bc1913460614275ed9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -8961,6 +8969,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 624863572803907392, guid: 5f5a4881529b21d49bbc7788b6624548, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 769419160972626886, guid: 5f5a4881529b21d49bbc7788b6624548, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -8979,15 +8991,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1294023472652206172, guid: 5f5a4881529b21d49bbc7788b6624548, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1334.9
+      value: 1236
       objectReference: {fileID: 0}
     - target: {fileID: 1294023472652206172, guid: 5f5a4881529b21d49bbc7788b6624548, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 443
+      value: 292
       objectReference: {fileID: 0}
     - target: {fileID: 1294023472652206172, guid: 5f5a4881529b21d49bbc7788b6624548, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -902.7
+      value: -912
       objectReference: {fileID: 0}
     - target: {fileID: 1294023472652206172, guid: 5f5a4881529b21d49bbc7788b6624548, type: 3}
       propertyPath: m_LocalRotation.w
