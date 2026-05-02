@@ -23,6 +23,8 @@ public class RuneMelody : MonoBehaviour
 
     public float delay;
 
+    public float songDelay;
+
     void Start()
     {
         spriteRenderer = runes.GetComponent<SpriteRenderer>();
@@ -38,7 +40,7 @@ public class RuneMelody : MonoBehaviour
         if (instructions_text != null)
             instructions_text.gameObject.SetActive(false);
 
-        for (int i = 0; i < frames.Length; i++)
+        for (int i = 0; i < 5; i++)
         {
             spriteRenderer.sprite = frames[i].sprite;
 
@@ -50,11 +52,14 @@ public class RuneMelody : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
 
+        spriteRenderer.sprite = frames[0].sprite;
+
         if (reRune != null)
             reRune.gameObject.SetActive(true);
 
         if (instructions_text != null)
             instructions_text.gameObject.SetActive(true);
+
     }
 
     public void ReplayAnimation()
@@ -65,6 +70,21 @@ public class RuneMelody : MonoBehaviour
         }
 
         StartCoroutine(PlayAnimation());
+    }
+
+    public IEnumerator CorrectAnimation()
+    {
+        yield return new WaitForSeconds(2);
+
+        spriteRenderer.sprite = frames[5].sprite;
+
+
+        if (frames[5].sound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(frames[5].sound);
+
+            yield return new WaitForSeconds(songDelay);
+        }
     }
 }
 
