@@ -3826,6 +3826,7 @@ MonoBehaviour:
   reRune: {fileID: 634626037}
   instructions_text: {fileID: 263374506}
   delay: 1
+  songDelay: 4
 --- !u!82 &815196310
 AudioSource:
   m_ObjectHideFlags: 0

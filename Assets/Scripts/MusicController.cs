@@ -120,7 +120,7 @@ void checkFalse(GameObject obj)
         //}
         //this.gameObject.GetComponent<SceneChanger>().getNext(next.name);
 
-        yield return StartCoroutine(GetComponent<RuneMelody>().PlayAnimation());
+        yield return StartCoroutine(GetComponent<RuneMelody>().CorrectAnimation());
 
         SceneManager.LoadScene(GetComponent<SceneChanger>().nextScene);
     }
